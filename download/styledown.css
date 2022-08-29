@@ -1,0 +1,60 @@
+.header{
+	background-color: #003CFF;
+}
+.header h1{
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 50px;
+	color: #6FFF00;
+}
+.block{
+	background-color: #058124;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	color: white;
+}
+.imagedown {
+	padding-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+.content h2
+{
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.content p {
+	padding-left: 200px;
+	padding-right: 200px;
+}
+.requer h3{
+	padding-top: 50px;
+	padding-left: 200px;
+}
+.requer ol {
+	padding-left: 210px;
+}
+.download {
+	padding-top: 30px;
+	padding-left: 300px;
+	padding-bottom: 10px;
+}
+.btn {
+	  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:hover{
+	background-color: green;
+}
+.iklan {
+	padding-top: 40px;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+}
