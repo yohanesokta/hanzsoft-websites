@@ -1,0 +1,6 @@
+.navbr h2{
+ font-family: fantasy;
+}
+.navbr h2:hover{
+	color: red;
+}
