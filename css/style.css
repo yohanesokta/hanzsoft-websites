@@ -4,3 +4,16 @@
 .navbr h2:hover{
 	color: red;
 }
+
+footer{
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #0069FF;
+	color: white;
+	transition: 0.3s;
+}
+footer:hover{
+	border: 1px solid #0069FF;
+	background-color: white;
+	color: #0069FF;
+}
