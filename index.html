@@ -1,103 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="vieport" content="width=device-width, initial-scale=1">
-    <title>Hanz Software</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>HanzSoft - Home</title>
 </head>
 <body>
-<!--Loader-->
+    <div class="continer">
+<nav>
+    <ul>
+        <h1 class="tag-name">Yohanz <span>Soft</span></h1>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="/software">Software Download</a>
+            <ul>
+                <li><a href="/software">All Software</a></li>
+                <li><a href="#">Adobe</a></li>
+            </ul>
+         </li>
+         <li><a href="/about">About</a>
+        </li>
+         <li><a href="#" onClick="return confirm ('Yakin?')">Contact Wa</a></li>
+    </ul>
+</nav>
+    </div>
 
-  <div class="bg-loader">
-    <div class="loader">
+    <div class="prg-mng">
+        <h1 class="store-name"> Explore And Download Free Software</h1>
+        <h2>(fast and safe)</h2>
+        <img class="logocom" src="img/logo-com.png" alt="Logocom">
+        <div class="program">
+            <h3>
+                Some Apps
+            </h3>
+            <ul>
+                <a href="/photoshop"><img src="photoshop/logo2.png" alt=""></a>
+                <a href="/after-effect"><img src="after-effect/logo2.png" alt=""></a>
+                <a href="/ilustrator"><img src="ilustrator/logo2.png" alt=""></a>
+            </ul>
+        </div>
+        <div class="link-other">
+            <a href="/software">Other Software</a>
+        </div>
 
     </div>
-  </div>
 
 
+    <!-- footer -->
 
-<!-- HEader-->
-<div class="medsos">
-    <div class="continer">
-        <ul>
-            <li>
-                <a href="#" ><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" ><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" ><i class="fa-brands fa-instagram"></i></a>
-            </li>
+       
+<footer>
+    <div class="footer-content">
+        <h3>Yohanes Oktanio</h3>
+        <p>Yohanes Oktanio or YhanzC Product made for school project or for fun!</p>
+        <ul class="social">
+            <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#!"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#!"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#!"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#!"><i class="fa fa-linkedin-square"></i></a></li>
         </ul>
     </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy;2022 Yohanes Oktanio, All rights reserved</p>
     </div>
-    <header>
-        <div class="continer">
-        <h1><a href="index.html">Yohanz Software</a></h1>
-        <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="about/">About</a></li>
-            <li><a href="software/">Software Download</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul></div>
-    </header>
+</footer>
 
-    <!--Banner-->
-
-    <section class="banner">
-     <h2>Wellcome To Yohanz Software</h2>
-    </section>
-
-    <!--About-->
-
-    <section class="about">
-        <div class="continer">
-            <h3>ABOUT</h3>
-            <p>Websites ini akan menampilkan beberapa software dengan crack untuk kebutuhan pendidikan seperti  <strong>Adobe Software , Corel Draw , XAMPP , Plugins </strong> Maupun software lain yang berbayar, kalian dapat mengakses situs ini secara gratis dan men downloadnya secara gratis
-            </p>
-        </div>
-    </section>
-    <!--Service-->
-    <section class="services">
-        <div class="continer">
-            <h3>SERVICES</h3>
-            <div class="box">
-                <div class="col-4">
-                    <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <h4>Mobile Apps</h4>
-                </div>
-                <div class="col-4">
-                    <div class="icon"><i class="fa-solid fa-desktop"></i></div>
-                    <h4>PC SOFTWARE</h4>
-                </div>
-                <div class="col-4">
-                    <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h4>TUTORIAL</h4>
-                </div>
-                <div class="col-4">
-                    <div class="icon"><i class="fa-brands fa-hackerrank"></i></div>
-                    <h4>Hanz Protect</h4>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-      <!--Fotter-->
-
-      <footer>
-        <div class="continer">
-            <small>
-                Copyright &copy; 2022 - Yohanes Oktanio. All right Reserved
-            </small>
-        </div>
-      </footer>
-
-      <script type="text/javascript">
-        $(document).ready(function(){
-            $(".bg-loader").hide();
-        })
-      </script>
-    <foot</footer>
 </body>
 </html>
