@@ -1,61 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="vieport" content="width=device-width, initial-scale=1">
-    <title>Hanz Software</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="expires" content="0">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style-mobile.css">
+    <title>HanzSoft - About</title>
 </head>
 <body>
-<!--Loader-->
-
-  <div class="bg-loader">
-    <div class="loader">
-
-    </div>
-  </div>
-
-
-
-<!-- HEader-->
-<div class="medsos">
     <div class="continer">
-        <ul>
-            <li>
-                <a href="#" ><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" ><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" ><i class="fa-brands fa-instagram"></i></a>
-            </li>
-        </ul>
+<nav>
+    <ul>
+        <h1 class="tag-name">Yohanz <span>Soft</span></h1>
+        <li><a href="../">Home</a></li>
+        <li><a href="..//software">Software Download</a>
+            <ul>
+                <li><a href="/software">All Software</a></li>
+                <li><a href="#">Adobe</a></li>
+            </ul>
+         </li>
+         <li><a href="#!" class="active">About</a>
+        </li>
+         <li><a href="#" onClick="return confirm ('Yakin?')">Contact Wa</a></li>
+    </ul>
+</nav>
     </div>
-    </div>
-    <header>
-        <div class="continer">
-        <h1><a href="index.html">Yohanz Soft</a></h1>
-        <ul>
-            <li ><a href="../">Home</a></li>
-            <li class="active"><a href="#">About</a></li>
-            <li><a href="../software/">Software Download</a></li>
-            <li><a href="../contact/">Contact</a></li>
-        </ul></div>
-    </header>
-  <!--label-->
 
-  <section class="label">
-    <div class="continer">
-        <p>Home/About</p>
-    </div>
-  </section>
-
-    <!--About-->
-
-    <section class="about">
-        <div class="continer">
-            <h3>ABOUT</h3>
-            <p>Dengan menggunakan informasi, layanan dan produk yang tersedia melalui situs ini yaitu dengan mendownload sebagian atau seluruh file yang ada di website ini maka anda MENGETAHUI dan MENYETUJUI syarat dan ketentuan berikut ini:</p>
+    <div class="prg-mng">
+        <h1 class="store-name"> ABOUT</h1>
+        <div class="text-about">
+             <p>Dengan menggunakan informasi, layanan dan produk yang tersedia melalui situs ini yaitu dengan mendownload sebagian atau seluruh file yang ada di website ini maka anda MENGETAHUI dan MENYETUJUI syarat dan ketentuan berikut ini:</p>
             <br>
             <p>1. Semua penggunaan perangkat lunak/software dan games yang disediakan dalam situs ini sepenuhnya diluar tanggung jawab situs ini.</p>
             <br>
@@ -77,22 +54,33 @@
             <br>
             <p>Jika Anda adalah penerbit dari sebuah software dan ingin menghapusnya dari sini, silahkan kirim pesan melalui Kontak Kami : admin <strong>yohanesoktayt72@gmail.com</strong>. Kami kemudian akan menghubungi Anda dalam waktu 48 jam untuk memverifikasi identitas Anda dan akan menindaklanjuti laporan anda</p>
         </div>
-    </section>
-
-      <!--Fotter-->
-
-      <footer style="margin-top: height;">
-        <div class="continer">
-            <small>
-                Copyright &copy; 2022 - Yohanes Oktanio. All right Reserved
-            </small>
+        
+        <div class="link-other">
+            <a href="/software">Software Download</a>
         </div>
-      </footer>
 
-      <script type="text/javascript">
-        $(document).ready(function(){
-            $(".bg-loader").hide();
-        })
-      </script>
+    </div>
+
+
+    <!-- footer -->
+
+       
+<footer>
+    <div class="footer-content">
+        <h3>Yohanes Oktanio</h3>
+        <p>Yohanes Oktanio or YhanzC Product made for school project or for fun!</p>
+        <ul class="social">
+            <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#!"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#!"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#!"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#!"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy;2022 Yohanes Oktanio, All rights reserved</p>
+    </div>
+</footer>
+
 </body>
 </html>
