@@ -1,0 +1,77 @@
+.bg-yellow{
+	background-color: #FD6400;
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar-text-1{
+	color: white;
+	font-family: fantasy;
+	text-decoration: none;
+	font-size: 27px;
+}
+.navbar-text-1:hover{
+	color: white ;
+	font-size: 28px;
+}
+
+.ads-p{
+	display: none;
+}
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+        .navbar-text-1{
+	color: white;
+	font-family: fantasy;
+	text-decoration: none;
+	font-size: 27px;}
+	.ads-l{
+		display: none;
+	}
+
+}
+
+
+
+
+
+.logo-1{
+	padding-top: 30px;
+}
+
+.text-logo-2 h1{
+	padding-top: 20px;
+	font-family: fantasy;
+	color: white;
+}
+.prg-view p {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	color: #33fd00;
+}
+.sysreq ol li{
+	display: flex;
+	color:#33fd00;
+}
+.dwn-text{
+	color: rgb(255, 255, 255);
+	font-size: 15px;
+	font-family: sans-serif;
+}
+footer{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: white;
+	background-color: #414141;
+}
+
+.pad-10{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
