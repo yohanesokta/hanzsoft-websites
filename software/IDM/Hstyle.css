@@ -6,7 +6,8 @@
 @media screen and (min-width: 768px) {
     .navbar-text-1{
 	color: white;
-	font-family: fantasy;
+	font-family: fantasy sans-serif;
+	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 27px;
 }
@@ -26,7 +27,7 @@
 
         .navbar-text-1{
 	color: white;
-	font-family: fantasy;
+	font-family: fantasy sans-serif;
 	text-decoration: none;
 	font-size: 27px;}
 	.ads-l{
@@ -42,31 +43,28 @@
 .logo-1{
 	padding-top: 30px;
 }
-.logo-1 img{
-	border-radius: 50%;
-	border: 6px solid #E3E3E3;
-}
-.logo-1 img:hover{
-border: 10px solid #E3E3E3;
-}
 
 .text-logo-2 h1{
 	padding-top: 20px;
-	font-family: fantasy;
+	font-family: fantasy sans-serif;
 	color: white;
 }
 .prg-view p {
 	padding-left: 20px;
 	padding-right: 20px;
 	text-align: center;
-	color: #FF5D00;
+	color: #33fd00;
+}
+.prg-view p strong {
+	color: #B5FD00;
+	font-weight: 700;
 }
 .sysreq ol li{
 	display: flex;
-	color:#FF5D00;
+	color:#33fd00;
 }
 .dwn-text{
-	color: white;
+	color: rgb(255, 255, 255);
 	font-size: 15px;
 	font-family: sans-serif;
 }
@@ -81,4 +79,25 @@ footer{
 .pad-10{
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+.code-paste{
+}
+.code-paste p {
+	border-radius: 15px;
+	padding: 40px;
+	position: relative;
+	text-align: left;
+	color: #0369FF;
+	background-color: #292D3E;
+	transition: 0.3s ease;
+}
+.code-paste p:hover{
+	background-color: #020F41;
+}
+.link-npp{
+	text-decoration: none;
+	transition: 0.3s;
+}
+.link-npp:hover{
+	text-decoration: underline;
 }
