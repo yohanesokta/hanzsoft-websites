@@ -1,0 +1,104 @@
+@media only screen and (min-width : 280px) {
+    .ads-l{
+        display: none;}
+    .ads-p{
+        display: block;
+    }
+}
+.con{
+    height: auto;
+}
+.sub-con-first{
+    display: block;
+}
+.icon-s{
+    display: flex;
+    margin: auto;
+    width: 200px;
+    pad
+}
+.con-two h1{
+    display: none;
+}
+.item-prop{
+    
+    display: block;
+}
+
+@media only screen and (min-width : 992px) {
+
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+    body{
+        background: rgb(9,3,111);
+        background: linear-gradient(90deg, rgba(9,3,111,1) 0%, rgba(104,104,185,1) 29%, rgba(139,139,205,1) 49%, rgba(102,102,212,1) 64%, rgba(2,10,136,1) 100%);
+        height: 100vh;
+    }
+    .a-header{
+        color: white;
+        text-decoration: none;
+        font-family: 'Kanit',arial;
+    }
+    .con{
+        margin-left: 10%;
+        margin-top: 30px;
+        width: 80%;
+        height: 80vh;
+        border-radius: 20px;
+        background-color: rgba(35, 0, 35, 0.5);
+    }
+    .icon-s{
+        width: 20%;
+        display: flex;
+        border-radius: 15px;
+        padding:20px;
+    
+    }
+    .sysreq{
+        width:80%;
+        margin-top: 35px;
+    }
+    .sysreq ol li{
+        color:rgb(7, 255, 7);
+    }
+    .con-first{
+        display: block;
+    }
+    .sub-con-first{
+        display: flex;
+        height: 50%;
+    }
+    .con-two{
+        display: flex;
+        display: ;
+        width: 100%;
+        height:60px;
+        background-color: rgba(35, 0, 255, 0.8);
+    }
+    .con-two h1{
+        display: block;
+        padding: 10px 40px 10px 40px;
+        color: wheat;
+        font-family: 'Kanit', monospace;
+        font-size: 30px;
+    }
+    .con-two a{
+        margin: auto;
+        margin-top: 7px;
+        height: 40px;
+    }
+    .con-first p{
+        color: white;
+        text-align: center;
+    }
+    .ads-p{
+        display: none;
+    }
+    .ads-l{
+        display: block;
+    }
+    
+    .item-prop{
+        display: flex;
+    }
+
+}
