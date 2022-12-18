@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+@media only screen and (max-width: 600px){
 *{
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
 }
 nav *{
+	display: none;
 	margin:0;
 	padding: 0;
 	outline: none;
@@ -15,12 +17,14 @@ nav *{
 	font-family: "Poppins",arial;
 }
 body{
+	overflow-x:hidden;
 	background-image: url("../img/home_background.jpg");
 	background-size: 100vw;
 	background-repeat: no-repeat;
 	background-color: #000D1E;
 }
 nav{
+	display: none;
 	z-index: 2;
 	position: fixed;
 	top: 0;
@@ -113,20 +117,19 @@ nav:hover{
 	display: flex
 }
 .hero h1{
-	width:100%;
 	margin: auto;
 	margin-top: 150px;
 	text-align:center;
 	transition: all 0.5s ease;
 	color: white;
 	font-family: "Secular One",arial;
-	font-size: 80px;
+	font-size: 50px;
 }
 .hero p{
 	width:100%;
 	margin-top: -10px;
 	transition: all 0.5s ease;
-	font-size: 20px;
+	font-size: 12px;
 	font-family: "Poppins",arial;
 	color:white;
 	text-align:center;
@@ -137,16 +140,19 @@ nav:hover{
 	color: rgba(255,255,255,0);
 	transition: all 1s ease;
 	font-family: arial;
+	font-size: 20px;
 }
 .con-dp p{
 	text-align: center;
+	font-size: 12px;
 	transition: all 1s ease;
-	color: rgba(255,255,255,0);
+	color: rgba(255,255,255,.7);
 }
 .image-run{
 	display: flex;
 }
 .image-run img{
+	width:200px;
 	opacity: 0;
 	transition: all 2s ease;
 	margin:auto;
@@ -212,6 +218,7 @@ nav:hover{
 	text-align: center;
 	margin-top: 20px;
 	color:white;
+	font-size: 16px;
 	font-family: 'Poppins',arial;
 	letter-spacing: .1em;
 }
@@ -228,33 +235,41 @@ nav:hover{
 	text-align: center;
 	color: white;
 	font-family: 'Poppins',arial;
-	font-size: 20px;
+	font-size: 12px;
 }
 footer{
+	display: none;
 	margin-top: 100px;
 	display: flex;
+
+	display: none;
 	width:100%;
 	height: 300px;
 	background-color: #222222;
 }
+
 .f-fi{
-	display: flex;
+	display: none;
 	width: 25%;
 
 	border-right:1px solid rgba(255,255,255,.3);
 }
 .fi-img{
 	margin-top: 100px;
-	display: flex;
+	display: none;
 	width: 100%
 }
 .fi-img img{
+
+	display: none;
 	margin-left: 40px;
 	width: 100px;
 	height:80px;
 
 }
 .fi-img h2{
+
+	display: none;
 	margin-left: 20px;
 	margin-top: 45px;
 	color: white;
@@ -263,22 +278,30 @@ footer{
 
 }
 .f-con h1{
+
+	display: none;
 	font-family: 'Poppins',arial;
 	color: white;
 	margin-top: 40px;
 	margin-left: 20px;
 }
 .f-con p{
+
+	display: none;
 	font-family: arial;
 	color: white;
 	margin-left: 20px;
 	font-size: 12px;
 }
 .f-link{
+
+	display: none;
 	margin-left: 20px;
 	margin-top: 30px;
 }
 .f-link a{
+
+	display: none;
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
@@ -289,23 +312,35 @@ footer{
 .f-linkb{
 	margin-top: 20px;
 	width: 55vw;
+
+	display: none;
 	background-color: rgba(255,255,255,.3);
+
+	display: none;
 	height:3px;
 }
 .linked{
 	margin-top: 20px;
+
+	display: none;
 	display: flex;
 }
 .gmail{
+
+	display: none;
 	display: flex;
 }
 .gmail i{
 	font-size: 20px;
+
+	display: none;
 	color: white
 }
 .gmail a{
 	text-transform: lowercase;
 	font-size: 12px;
+
+	display: none;
 	margin-top: 1px;
 	margin-left: 5px;
 	font-weight: normal;
@@ -315,9 +350,11 @@ footer{
 	cursor: normal;
 }
 .footer_mobile{
-	display: none;
+	display: block;
 	color: white;
-	font-size: 12px;
+	font-size: 8px;
 	padding:10px;
 	text-align: center;
+	font-family: 'Poppins',arial;
+}
 }

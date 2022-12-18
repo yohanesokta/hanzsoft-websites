@@ -3,6 +3,11 @@
  require '../config/connect.php';
  $result = mysqli_query($db,"SELECT * FROM  f_soft WHERE nsi = $nsi_p");
  $data = mysqli_fetch_assoc($result);
+  if (isset($_POST["submit"])){
+ 		require '../config/g_send.php';
+ 		send($_POST,$nsi_p);
+	    $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = $nsi_p ORDER BY no Desc");
+} 
 
  ?>
 <!DOCTYPE html>
@@ -13,9 +18,24 @@
 	<title>Hanzsoft | <?php echo $data['nama']; ?></title>
 	<link rel="icon" type="image/x-icon" href="../source/favicon.ico">
 	<link rel="stylesheet" href='../source/stylesheet/gt_front.css'>
+	<link rel="stylesheet" href="../source/mobile_css/gt_mb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
+	<div class="pc" id="warning">
+		<div class="pc-icon">
+		<i class="fa-solid fa-triangle-exclamation"></i>
+		</div>
+		<h3>PC - APP</h3>
+		<div class="pc-text">
+		<p>
+			Hanya bisa dibuka dengan menggunakan desktop browser atau browser mode desktop dengan minimun tampilan yang ada.
+		</p>
+		</div>
+		<div class="pc-btn">
+		<button id="btn-warning">TETAP BUKA</button>
+		</div>
+	</div>
 	<nav id="navbar">
 		<ul>
 			<li>
@@ -24,11 +44,11 @@
 					<span class="nav-item">Hanzsoft</span>
 				</a>
 			</li>
-			<li><a href="/" id="trans2" class="a-trans">
+			<li><a href="../" id="trans2" class="a-trans">
 				<i class="fas fa-home"></i>
 				<span class="nav-item">Home</span>
 			</a></li>
-			<li><a href="#" id="trans3" class="a-trans">
+			<li><a href="../downloader_software/" id="trans3" class="a-trans">
 				<i class="fas fa-rocket"></i>
 				<span class="nav-item">Software</span>
 			</a></li>
@@ -85,6 +105,36 @@
 							<div class="line-f"></div>
 							<a href="<?php echo $data['D2L'] ?>" target="_blank">Download</a>
 						<?php } ?>
+
+						<div class="after">
+							<h2>Suka Dengan Halaman Ini ?</h2>
+							<p>Berikan pengalamanmu ke kolom komentar dibawah !</p>
+							<div class="comment">
+								<form action="" method="post">
+									<input type="text" id="user_name" name="user_name" placeholder="Nama" required>
+									<textarea name="txt" id="txt" cols="100" rows="4" required placeholder="komentar"></textarea>
+									<div class="btn">
+									<button type="submit" name="submit" id="c_men">Add Comment</button>
+									</div>
+								</form>
+								<div class="board">
+									<div class="c-board">
+										<?php 
+											 $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = $nsi_p ORDER BY no Desc");
+											 while ($cm = mysqli_fetch_assoc($cm_result)) {
+											     
+										 ?>
+										<!-- komentar -->
+										<div class="d-cm">
+											<p>	<?php echo $cm['nama']; ?></p>
+											<p><?php echo $cm['isi']; ?></p>
+										</div>
+									<?php } ?>
+										<!-- end comment -->
+									</div>
+								</div>
+							</div>
+						</div>
 				</div>
 		</div>
 		</div>
@@ -123,5 +173,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="../source/javascript/gt_scr.js"></script>
 </body>
 </html>

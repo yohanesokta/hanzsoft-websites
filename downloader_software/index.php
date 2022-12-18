@@ -2,6 +2,11 @@
  require '../config/connect.php';
  $result = mysqli_query($db,"SELECT * FROM  product_q");
 
+ if (isset($_POST["submit"])){
+ 		require '../config/send.php';
+ 		send($_POST);
+	    $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = 1 ORDER BY no Desc");
+} 
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,8 +15,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hanzsoft | Downlod Software</title>
 	<link rel="stylesheet" href='../source/stylesheet/dw_first.css'>
+	<link rel="stylesheet" href="../source/mobile_css/dw_mb.css">
 	<link rel="icon" type="image/x-icon" href="../source/favicon.ico">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<script>
+		if (window.history.replaceState){
+			window.history.replaceState(null,null,window.location.href);
+		}
+	</script>
 </head>
 <body>
 	<nav id="navbar">
@@ -22,7 +33,7 @@
 					<span class="nav-item">Hanzsoft</span>
 				</a>
 			</li>
-			<li><a href="/" id="trans2" class="a-trans">
+			<li><a href="../" id="trans2" class="a-trans">
 				<i class="fas fa-home"></i>
 				<span class="nav-item">Home</span>
 			</a></li>
@@ -131,6 +142,42 @@
 
 
 		<?php $i++;} ?>
+
+						
+						<div class="after">
+							<h2>Suka Dengan Halaman Ini ?</h2>
+							<p>Berikan pengalamanmu ke kolom komentar dibawah !</p>
+							<div class="comment">
+								<form action="./#comen" method="post">
+									<input type="text" id="user_name" name="user_name" placeholder="Nama" required>
+									<textarea name="txt" id="txt" cols="100" rows="4" required placeholder="komentar"></textarea>
+									<div class="btn">
+									<button type="submit" name="submit" id="comen">Add Comment</button>
+									</div>
+								</form>
+								<div class="board">
+									<div class="c-board">
+										<?php 
+											 $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = 1 ORDER BY no Desc");
+											 while ($cm = mysqli_fetch_assoc($cm_result)) {
+											     
+										 ?>
+										<!-- komentar -->
+										<div class="div_comment">
+											<div class="comen">
+												<p><?php echo $cm['nama']; ?></p>
+												<div class="comen-txt">
+													<p><?php echo $cm['isi']; ?></p>
+												</div>
+											</div>
+										</div>
+
+									<?php } ?>
+										<!-- end comment -->
+									</div>
+								</div>
+							</div>
+						</div>
 				</div>
 		</div>
 		</div>

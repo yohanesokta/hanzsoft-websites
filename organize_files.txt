@@ -12,18 +12,21 @@ cdn		= 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.cs
 		  'https://fonts.googleapis.com/css2?family=Poppins&display=swap'
 		  'https://fonts.googleapis.com/css2?family=Secular+One&display=swap'
 
-[Downloader Page]
+[folder,file and function]
+js       	= source/javascript/
+dw_first.js = javascript for downloder page
+index.js 	= javascript for home page
+css 		= source/stylesheet
+dw_first 	= css for downloader page
+gt_front 	= css for get.php
+favicon 	= source/favicon.ico
+img			= source/img/*.webp
 
+[confiq]
+connect.php = connecting page to database
+send.php	= send comment on downloder page
+g_send.php	= send comment on get.php
 
-
-[Database]
-no
-nama
-categori
-nsi
-Description
-icon
-version
 
 
 Creative by Yohanes Oktanio or YhanzC Product

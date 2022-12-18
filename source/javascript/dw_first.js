@@ -1,3 +1,6 @@
+if (window.history.replaceState){
+			window.history.replaceState(null,null,window.location.href);
+		}
 let card = document.getElementsByClassName('card');
 let image = document.getElementsByClassName('imgSoft');
 	for (let lg=0; lg< card.length; lg++){

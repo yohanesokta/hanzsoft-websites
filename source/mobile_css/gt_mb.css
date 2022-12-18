@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-*{
+@media only screen and (max-width: 600px){
+
+	*{
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
@@ -22,6 +22,8 @@ body{
 nav{
 	z-index: 2;
 	position: fixed;
+
+	display: none;
 	top: 0;
 	bottom: 0;
 	height: 100%;
@@ -104,7 +106,7 @@ nav:hover{
 
 footer{
 	margin-top: 100px;
-	display: flex;
+	display: none;
 	width:100%;
 	height: 300px;
 	background-color: #222222;
@@ -192,6 +194,7 @@ footer{
 	width:100%;
 }
 .nav-ex{
+	display: none;
 	width: 95px;
 	height:93px;
 	background-color: #5B5B5B;
@@ -208,12 +211,12 @@ footer{
 }
 .header-first h2{
 	color:white;
-	margin-left: 20px;
+	margin-left:0;
 	font-family: 'Poppins',arial;
 	width:100%;
 }
 .header-first p{
-	margin:0 0 0 20px;
+	margin-left:0;
 	font-family: 'Poppins',arial;
 	color: white;
 	font-size: 12px;
@@ -224,7 +227,7 @@ footer{
 }
 .con-list h2{
 	color: #ffff;
-	margin-left: 40px;
+	margin-left: 10px;
 	margin-top: 20px;
 	font-family: arial;
 	width:200px;
@@ -237,10 +240,12 @@ footer{
 .con-list h1{
 	color: white;
 	font-family: 'Poppins',arial;
-	margin:40px;
+	margin-top: 40px;
+	margin-bottom: 40px; 
+	margin:10px;
 }
 .con-list img{
-	margin-left: 40px;
+	margin-left: 10px;
 	width:200px;
 	border-radius: 5px;
 }
@@ -248,13 +253,13 @@ footer{
 	margin:20px 20px 20px 40px;
 	height:5px;
 	width:220px;
-	background-color: rgba(255,255,255,.2);
+	background-color: rgba(255,255,255,0);
 }
 .con-list p{
 	color: white;
 	font-family: 'Poppins',arial;
-	margin-left: 40px;
-	width:800px;
+	margin-left: 10px;
+	width:80%;
 }
 .sys{
 	margin-top: 20px;
@@ -271,11 +276,12 @@ footer{
 .con-list h3{
 	color: white;
 	margin-top: 40px;
-	margin-left: 40px;
+	margin-left: 10px;
 	font-family: 'Poppins',arial;
 }
 
 .sosmed{
+	display: none;
 	padding:10px;
 	overflow-x: hidden;
 	position: fixed;
@@ -321,7 +327,8 @@ footer{
  	color:blue;
  }
 .after{
-	margin-top: 100px;
+	display: none;
+	margin-top: ;
 }
 .sosmed h3{
 	display: flex;
@@ -334,13 +341,14 @@ footer{
 	color: black;
 }
 .comment{
+	display: none;
 	margin-top: 20px;
 	margin-left: 20px;
 	padding-top: 10px;
 	width: 80%;
 	display: block;
 	border-radius: 5px;
-	background-color: gray;
+	background-color: rgba(0,0,0,.2);
 }
 .comment form{
 	display: block;
@@ -384,7 +392,7 @@ footer{
 }
 .board{
 	width:100%;
-	display: flex;
+	display: inline-block;
 	height:560px;
 }
 .c-board{
@@ -393,31 +401,95 @@ footer{
 	height:500px;
 	border-radius: 5px;
 	overflow-y: scroll;
-	background-color:rgba(255,255,255,.5);
+	background-color:rgba(255,255,255,.1);
 }
-.d-cm{
-	background-color: white;
-	border-radius: 5px;
-	margin-top: 20px;
+.div_comment{
+	width: 75%;
+	margin-top: 40px;
+}
+.comen{
+	display:inline-block;
+	padding: 10px;
+	background-color: rgba(255,255,255,1);
 	margin-left: 20px;
-	width: 80%;
+	border-radius: 0 10px 10px 10px;
+
 }
-.d-cm p{
-	margin:20px;
-	padding-top: 10px;
-	width:auto;
-}
-.d-cm p:first-child{
+.comen p{
 	color: black;
-	font-family: arial;
+	font-weight: bold;
+	font-family: 'Poppins',arial;
+	display: inline;
 }
-.d-cm p:nth-child(2){
-	padding: 0;
-	color: #595959;
-	margin-top: -10px;
-	padding-bottom: 10px;
-	overflow-x:hidden;
+.comen-txt {
+	margin-top:10px;
+	padding: 10px;
+	padding-right: 30px;
+	background-color: gray;
+	border-radius: 5px;
+}
+.comen-txt p{
+	font-weight: normal;
+	color: white;
+	display: inline-block;
 }
 .pc{
-	display: none;
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color: white;
+}
+.pc-icon {
+	display: flex;
+}
+.pc-icon i{
+	display: block;
+	color: red;
+	font-size: 100px;
+	height:100px;
+	margin:auto;
+	margin-top:50px;
+	width: 100%;
+	text-align: center;
+}
+}
+.pc h3{
+	text-align: center;
+}
+.pc-text{
+	margin-top:50px;
+	display: flex;
+	width:100%;
+}
+.pc-text p{
+	width:70%;
+	margin:auto;
+	text-align: center;
+}
+.pc-btn{
+	display: flex;
+	margin-top: 20px;
+}
+.pc button{
+	display: block;
+	margin-top: 20px;
+	margin: auto;
+	outline: none;
+	border: none;
+	background-color: rgba(255,255,255,.2);
+	padding:10px;
+	color: white;
+	opacity: 1;
+	animation: pcOpacity 10s;
+}
+@keyframes pcOpacity {
+	from,90%{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+
 }

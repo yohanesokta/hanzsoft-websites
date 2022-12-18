@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-*{
+@media only screen and (max-width: 600px){
+	*{
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
@@ -17,9 +16,12 @@ nav *{
 body{
 	background-size: 100vw;
 	background-repeat: no-repeat;
-	background-color: #343434;
+	background-color: white;
+	background-attachment: fixed;
+	background-size: cover;
 }
 nav{
+	display: none;
 	z-index: 2;
 	position: fixed;
 	top: 0;
@@ -30,7 +32,7 @@ nav{
 	background: rgba(255,255,255,1);
 	overflow: hidden;
 	transition: width 0.2s linear;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+	box-shadow: 0 20px 20px rgba(0,0,0,0.1);
 	
 	transition: all 0.5s ease;
 	animation: navbar-anim 2s;
@@ -104,13 +106,12 @@ nav:hover{
 
 footer{
 	margin-top: 100px;
-	display: flex;
+	display: none;
 	width:100%;
 	height: 300px;
 	background-color: #222222;
 }
 .f-fi{
-	margin-left: 93px;
 	display: flex;
 	width: 25%;
 
@@ -192,31 +193,36 @@ footer{
 	width:100%;
 }
 .nav-ex{
+	display: none;
 	width: 95px;
 	height:93px;
-	background-color: #5B5B5B;
+	background-color: #ffff;
 }
 .con-utama{
-	display: flex;
+	margin: 0;
+	padding: 0;
+	display: block;
 	width:100%;
 }
 .header-first{
 	display: block;
-	padding:20px 0 20px 0;
-	width:100%;
-	background-color: #5B5B5B;
+	background-color: #676767;
+	box-shadow:none;
 }
 .header-first h2{
 	color:white;
-	margin-left: 20px;
+	text-align: center;
 	font-family: 'Poppins',arial;
+	font-size: 16px;
+	margin: 0;
 	width:100%;
 }
 .header-first p{
-	margin:0 0 0 20px;
+	text-align: center;
+	margin: 0;
 	font-family: 'Poppins',arial;
 	color: white;
-	font-size: 12px;
+	font-size: 8px;
 }
 .con-list{
 	width:100%;
@@ -224,8 +230,7 @@ footer{
 }
 .con-list h2{
 	color: #ffff;
-	margin-left: 40px;
-	margin-top: 20px;
+	margin-left: 10px;
 	font-family: arial;
 	width:200px;
 	border-bottom: 2px solid rgba(255,255,255,.5);
@@ -234,49 +239,66 @@ footer{
 	display: block;
 	width: 100%;
 }
-.con-list h1{
-	color: white;
-	font-family: 'Poppins',arial;
-	margin:40px;
+.m-cr{
+	margin-top:-120px;
+	transform: scale(0.8);
+	width: 100%;
 }
-.con-list img{
-	margin-left: 40px;
-	width:200px;
-	border-radius: 5px;
+.cr{
+	display: block;
+	width: 80%;
 }
-.line-f{
-	margin:20px 20px 20px 40px;
-	height:5px;
-	width:220px;
-	background-color: rgba(255,255,255,.2);
-}
-.con-list p{
-	color: white;
-	font-family: 'Poppins',arial;
-	margin-left: 40px;
-	width:800px;
-}
-.sys{
-	margin-top: 20px;
-}
-.con-list a{
-	margin:40px;
-	background-color: #FF002C;
-	padding: 10px 20px;
+.cr a{
+	margin: 10px;
 	text-decoration: none;
+}
+.card{
+	flex-direction: column;
+	width: 100%;
+	height:250px;
 	border-radius: 5px;
-	font-family: 'Poppins',arial;
-	color: white;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 10px #B2B2B2;
 }
-.con-list h3{
-	color: white;
-	margin-top: 40px;
-	margin-left: 40px;
-	font-family: 'Poppins',arial;
-}
+.card:hover{
 
+	box-shadow: 0 0 15px #AAAAAA;
+	border-radius: 30px;
+	transform: scale(1.05);
+}
+.card img{
+
+	width: 80px;
+	height:80px;
+	margin:10px;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+.card{
+	text-decoration: none;
+}
+.card p{
+	color: gray;
+	margin-left: 10px;
+	font-family: 'Poppins',arial;
+	font-size: 12px;
+}
+.card h1{
+	color: black;
+	font-family: 'Poppins',arial;
+	margin-left: 10px;
+	text-decoration: none;
+}
+.tab-line{
+	display: none;
+	width: 300px;
+	background-color:rgba(255,255,255,.05);
+	height:5px;
+	margin-bottom: 50px;
+}
 .sosmed{
 	padding:10px;
+	display: none;
 	overflow-x: hidden;
 	position: fixed;
 	z-index: 5;
@@ -320,9 +342,6 @@ footer{
 
  	color:blue;
  }
-.after{
-	margin-top: 100px;
-}
 .sosmed h3{
 	display: flex;
 	opacity: 1;
@@ -332,6 +351,24 @@ footer{
 	margin-top:10px;
 	transition: 0.3s ease;
 	color: black;
+}
+.after{
+	display:none;
+	margin-top: 50px;
+	width: 100%;
+}
+.after h2{
+	color: black;
+	font-size: 20px;
+	
+	left: 20px;
+	width: 100%;
+	font-family: 'Poppins',arial;
+}
+.after p{
+	margin-left: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: gray;
 }
 .comment{
 	margin-top: 20px;
@@ -395,29 +432,39 @@ footer{
 	overflow-y: scroll;
 	background-color:rgba(255,255,255,.5);
 }
-.d-cm{
-	background-color: white;
-	border-radius: 5px;
+.div_comment{
+	width: 75%;
+	height:100px;
 	margin-top: 20px;
-	margin-left: 20px;
-	width: 80%;
+	
+	margin-top:40px;
 }
-.d-cm p{
-	margin:20px;
-	padding-top: 10px;
-	width:auto;
+.div_comment:last-child(){
 }
-.d-cm p:first-child{
+.comen{
+	display: inline-block;
+	padding: 10px;
+	background-color: rgba(255,255,255,1);
+	margin-left: 10px;
+	border-radius: 0 10px 10px 10px;
+
+}
+.comen p{
 	color: black;
-	font-family: arial;
+	font-weight: bold;
+	font-family: 'Poppins',arial;
+	display: inline-block;
 }
-.d-cm p:nth-child(2){
-	padding: 0;
-	color: #595959;
-	margin-top: -10px;
-	padding-bottom: 10px;
-	overflow-x:hidden;
+.comen-txt {
+	margin-top:10px;
+	padding: 10px;
+	padding-right: 30px;
+	background-color: gray;
+	border-radius: 5px;
 }
-.pc{
-	display: none;
+.comen-txt p{
+	font-weight: normal;
+	color: white;
+	display: inline-block;
+}
 }
