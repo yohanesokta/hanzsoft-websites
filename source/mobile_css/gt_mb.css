@@ -482,10 +482,10 @@ footer{
 	padding:10px;
 	color: white;
 	opacity: 1;
-	animation: pcOpacity 10s;
+	animation: pcOpacity 30s;
 }
 @keyframes pcOpacity {
-	from,90%{
+	from,95%{
 		opacity: 0;
 	}
 	to{

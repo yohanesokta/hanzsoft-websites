@@ -24,7 +24,7 @@
 		}
 	</script>
 </head>
-<body>
+<body id="Body">
 	<nav id="navbar">
 		<ul>
 			<li>
@@ -59,6 +59,28 @@
 			</a></li>
 		</ul>
 	</nav>
+	<div class="m-navbar">
+		<div class="m-bt-navbar" id='navMobile'>
+		<div class="m-nav-menu">
+		 <a href="../">
+			<i class="fas fa-home"></i>
+			<p>Home</p>
+		 </a>
+		</div>
+		<div class="m-nav-menu">
+		 <a href="#">
+		 <i class="fas fa-rocket"></i>
+			<p>Software</p>
+		 </a>
+		</div>
+		<div class="m-nav-menu">
+		 <a href="../#about">
+			<i class="fas fa-address-card"></i>
+			<p>About</p>
+		 </a>
+		</div>
+		</div>
+	</div>
 	<!-- body -->
 <div class="sosmed">
 		<a href="https://www.facebook.com/yohanz.oktahsc" class="s-list"><i class="fa-brands fa-facebook"></i><h3 class="s-head">Facebook</h3></a>
@@ -66,7 +88,6 @@
 		<a href="https://github.com/yohanesokta" class="s-list"><i class="fa-brands fa-github"></i><h3 class="s-head">GitHub</h3></a>
 		<a href="https://discord.gg/ZsxrX2tM" class="s-list"><i class="fa-brands fa-discord"></i><h3 class="s-head">Discord</h3></a>
 	</div>
-
 	<div class="content">
 		<div class="nav-ex">
 		</div>

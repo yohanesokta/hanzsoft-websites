@@ -5,6 +5,9 @@
 	margin: 0;
 	scroll-behavior: smooth;
 }
+.m-navbar{
+	display: none;
+}
 nav *{
 	margin:0;
 	padding: 0;

@@ -1,5 +1,8 @@
-# hanzsoft-websites
-Lest Update 4.0 
-.use database
-.new ui
-.code make slime hahha
+﻿# Welcome to 4.0 Version!
+
+ - UI Baru
+ - Dengan Database
+ - Javascript Improved
+ - New Resposive Design (not for all)
+ Lest start
+
