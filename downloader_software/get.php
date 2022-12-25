@@ -3,6 +3,7 @@
  require '../config/connect.php';
  $result = mysqli_query($db,"SELECT * FROM  f_soft WHERE nsi = $nsi_p");
  $data = mysqli_fetch_assoc($result);
+ $tutor = $data['tutor'];
   if (isset($_POST["submit"])){
  		require '../config/g_send.php';
  		send($_POST,$nsi_p);
@@ -15,6 +16,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- no cache -->
+	<meta http-equiv="cache-control" content="max-age=0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="expires" content="Tue,01 jan 1980 1:00:00 GMT">
+	<meta http-equiv="pragma" content="no-cache">
+	<!--  -->
 	<title>Hanzsoft | <?php echo $data['nama']; ?></title>
 	<link rel="icon" type="image/x-icon" href="../source/favicon.ico">
 	<link rel="stylesheet" href='../source/stylesheet/gt_front.css'>
@@ -22,6 +30,19 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
+	<div class="overlay" id="loadOverlay">
+		<div class="overflex">
+		<div class="loading">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+	</div>
+	</div>
+<!-- loading -->
 	<div class="pc" id="warning">
 		<div class="pc-icon">
 		<i class="fa-solid fa-triangle-exclamation"></i>
@@ -56,7 +77,7 @@
 				<i class="fas fa-brands fa-square-github"></i>
 				<span class="nav-item">Projects</span>
 			</a></li>
-			<li><a href="#about" id="trans5">
+			<li><a href="../#about" id="trans5">
 				<i class="fas fa-address-card"></i>
 				<span class="nav-item">About</span>
 			</a></li>
@@ -64,7 +85,11 @@
 				<i class="fas fa-user"></i>
 				<span class="nav-item">Profile</span>
 			</a></li>
-			<li><a href="#" class="logout" id="trans7">
+			<li><a onclick="onTutor()">
+			<i class="fas fa-sharp fa-solid fa-circle-question"></i>
+				<span class="nav-item">Tutorial</span>
+			</a></li>
+			<li><a onclick="goBack()" class="logout" id="trans7">
 				<i class="fas fa-sign-out-alt"></i>
 				<span class="nav-item">Back</span>
 			</a></li>
@@ -77,8 +102,22 @@
 		<a href="https://github.com/yohanesokta" class="s-list"><i class="fa-brands fa-github"></i><h3 class="s-head">GitHub</h3></a>
 		<a href="https://discord.gg/ZsxrX2tM" class="s-list"><i class="fa-brands fa-discord"></i><h3 class="s-head">Discord</h3></a>
 	</div>
-
-
+	<!-- Popup Tutorial -->
+	<div class="popup" id="popup">
+		<div class="canvas-popup">
+			<!-- ISI dari Popup -->
+			<?php 
+				if(strlen($tutor) <= 1){
+			 ?>
+			<div style="display: flex; width: 100%;">
+			<i class="fa-sharp fa-solid fa-circle-exclamation" style="text-align: center; margin:auto; margin-top: 80px; color: black; font-size: 100px;"></i></div>
+			<h1 style="font-family: arial; text-align: center; margin-top: 20px; font-size: 20px;">Mohon maaf untuk saat ini tutorial tidak tersedia untuk aplikasi ini !</h1>
+			<?php }else{
+				echo $tutor; } ?>
+		</div>
+		<img src="../source/img/X-logo.png" alt="Close" id="btn-popup">
+	</div>
+	<!-- end popup -->
 	<div class="content">
 		<div class="nav-ex">
 		</div>
@@ -100,12 +139,14 @@
 						<a href="<?php echo $data['DL'];  ?>" target="_blank">Download</a>
 
 						<?php if($data['D2'] != 'none'){ ?>
-
 							<h3><?php echo $data['D2']; ?></h3>
 							<div class="line-f"></div>
 							<a href="<?php echo $data['D2L'] ?>" target="_blank">Download</a>
 						<?php } ?>
 
+						<!-- tombol tutorial -->
+						<a id = "tutor" style="cursor:default;"> Lihat Tutorial</a>
+						<!-- end -->
 						<div class="after">
 							<h2>Suka Dengan Halaman Ini ?</h2>
 							<p>Berikan pengalamanmu ke kolom komentar dibawah !</p>
@@ -152,9 +193,9 @@
 			<h1>Yohanes Oktanio</h1>
 			<p>Yohanes Oktanio or YhanzC Product made for school project or for fun!</p>
 			<div class="f-link">
-				<a href="/">Home</a>
-				<a href="">Software</a>
-				<a href="#about">About</a>
+				<a href="../">Home</a>
+				<a href="../downloader_software/">Software</a>
+				<a href="../#about">About</a>
 				<a href="">Profile</a>
 				<div class="f-linkb"></div>
 				<div class="linked">

@@ -13,6 +13,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- no cache -->
+	<meta http-equiv="cache-control" content="max-age=0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="expires" content="Tue,01 jan 1980 1:00:00 GMT">
+	<meta http-equiv="pragma" content="no-cache">
+	<!--  -->
 	<title>Hanzsoft | Downlod Software</title>
 	<link rel="stylesheet" href='../source/stylesheet/dw_first.css'>
 	<link rel="stylesheet" href="../source/mobile_css/dw_mb.css">
@@ -25,6 +32,19 @@
 	</script>
 </head>
 <body id="Body">
+	<div class="overlay" id="loadOverlay">
+		<div class="overflex">
+		<div class="loading">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+	</div>
+	</div>
+
 	<nav id="navbar">
 		<ul>
 			<li>
@@ -45,7 +65,7 @@
 				<i class="fas fa-brands fa-square-github"></i>
 				<span class="nav-item">Projects</span>
 			</a></li>
-			<li><a href="#about" id="trans5">
+			<li><a href="../#about" id="trans5">
 				<i class="fas fa-address-card"></i>
 				<span class="nav-item">About</span>
 			</a></li>
@@ -53,12 +73,13 @@
 				<i class="fas fa-user"></i>
 				<span class="nav-item">Profile</span>
 			</a></li>
-			<li><a href="#" class="logout" id="trans7">
+			<li><a onclick="goBack()" class="logout" id="trans7">
 				<i class="fas fa-sign-out-alt"></i>
 				<span class="nav-item">Back</span>
 			</a></li>
 		</ul>
 	</nav>
+
 	<div class="m-navbar">
 		<div class="m-bt-navbar" id='navMobile'>
 		<div class="m-nav-menu">
@@ -121,7 +142,7 @@
 									 ?>
 								<a
 								<?php if($d_prd['nsi'] != 100) { ?>
-								 href="get.php?nis=<?php echo $d_prd['nsi']; ?>" 
+								 href="get.php?nis=<?php echo $d_prd['nsi']; ?>&nama=<?php echo $d_prd['nama']; ?>" 
 								 <?php }?>><div class="card" id="cN">
 									<img src="../source/img/<?php echo $d_prd['icon']; ?>" class="imgSoft" alt="nis">
 									<p>Version : (<?php echo $d_prd['version']; ?>)</p>
@@ -135,7 +156,7 @@
 									 ?>
 								<a
 								<?php if($d_prd['nsi'] != 100) { ?>
-								 href="get.php?nis=<?php echo $d_prd['nsi']; ?>" 
+								 href="get.php?nis=<?php echo $d_prd['nsi']; ?>&nama=<?php echo $d_prd['nama']; ?>" 
 								 <?php }?>><div class="card"id="cT">
 									<img src="../source/img/<?php echo $d_prd['icon']; ?>"class="imgSoft" alt="nis">
 									<p>Version : (<?php echo $d_prd['version']; ?>)</p>
@@ -149,7 +170,7 @@
 									 ?>
 								<a
 								<?php if($d_prd['nsi'] != 100) { ?>
-								 href="get.php?nis=<?php echo $d_prd['nsi']; ?>" 
+								 href="get.php?nis=<?php echo $d_prd['nsi']; ?>&nama=<?php echo $d_prd['nama']; ?>" 
 								 <?php }?>><div class="card"id="cTR">
 									<img src="../source/img/<?php echo $d_prd['icon']; ?>"class="imgSoft" alt="nis">
 									<p>Version : (<?php echo $d_prd['version']; ?>)</p>
@@ -216,15 +237,15 @@
 			<h1>Yohanes Oktanio</h1>
 			<p>Yohanes Oktanio or YhanzC Product made for school project or for fun!</p>
 			<div class="f-link">
-				<a href="/">Home</a>
-				<a href="">Software</a>
-				<a href="#about">About</a>
+				<a href="../">Home</a>
+				<a href="#">Software</a>
+				<a href="../#about">About</a>
 				<a href="">Profile</a>
 				<div class="f-linkb"></div>
 				<div class="linked">
 					<div class="gmail">
 						<i class="fa-sharp fa-solid fa-envelope"></i>
-						<a href="#footer">yohanesoktayt72@gmail.com</a>
+						<a href="https://mail.google.com/mail/?to=inbox@example.com&bcc=yohanesoktayt72@gmail.com">yohanesoktayt72@gmail.com</a>
 					</div>
 
 					<div class="gmail">

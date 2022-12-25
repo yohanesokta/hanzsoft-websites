@@ -163,7 +163,7 @@ nav:hover{
 	color: #123956;
 	font-weight: bold;
 	margin:auto;
-	transition: 3s ease;
+	transition: 0.3s ease;
 }
 .hero a:hover{
 	letter-spacing: .15em;
@@ -320,4 +320,62 @@ footer{
 	font-size: 12px;
 	padding:10px;
 	text-align: center;
+}
+.overlay{
+	z-index: 99;
+	position: fixed;
+	width:100%;
+	height: 100%;
+	background-color: white;
+}
+.overflex{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.loading{
+	margin: auto;
+	width: 200px;
+	justify-content: space-between;
+	display: flex;
+}
+.bar{
+	margin: auto;
+	width: 20px;
+	height: 10px;
+	background-color: red;
+}
+.bar{
+	animation: load 1s infinite;	
+}
+.bar:nth-child(2){
+	animation-delay: .1s;
+}
+.bar:nth-child(3){
+	animation-delay: .2s;
+}
+.bar:nth-child(4){
+	animation-delay: .3s;
+}
+.bar:nth-child(5){
+	animation-delay: .4s;
+}
+.bar:nth-child(6){
+	animation-delay: .5s;
+}
+@keyframes load {
+	from{
+		padding-top:0px;
+		opacity: 1;
+		background-color: red;
+	}
+	50%{
+		padding-top:100px;
+		background-color: #FFDF00;
+	}
+	to{
+		padding-bottom: 0px;
+		opacity: 1;
+		background-color: red;
+	}
 }

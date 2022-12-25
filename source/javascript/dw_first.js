@@ -15,10 +15,8 @@ let navMobile = document.getElementById('navMobile');
 	let body = document.getElementById('Body');
 	offsite = body.offsetHeight;
 	offsite -= 800;
-	console.log(offsite);
 	window.addEventListener('scroll',function(){
 		let Value = window.scrollY;
-		console.log('key' + Value + 'Value' + offsite);
 		if(Value >= 50){
 			navMobile.style.height = '50px';
 		}
@@ -30,3 +28,10 @@ let navMobile = document.getElementById('navMobile');
 			navMobile.style.height = '';
 		}
 	})
+let loading = document.getElementById('loadOverlay');
+	window.addEventListener("load", () => {
+		loading.style.display = "none";
+	})
+function goBack() {
+  window.history.back();
+}

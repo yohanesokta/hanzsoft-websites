@@ -454,6 +454,9 @@ footer{
 	width: 100%;
 	text-align: center;
 }
+#tutor{
+	display: none;
+}
 }
 .pc h3{
 	text-align: center;

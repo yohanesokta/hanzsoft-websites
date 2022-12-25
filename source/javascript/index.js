@@ -60,11 +60,16 @@ window.addEventListener("scroll",function(){
 	if (Value >= 150){
 		document.getElementById('hanz-name').style.opacity = '0';
 		document.getElementById('hanz-tag').style.opacity = '0';
-		document.getElementById('explore').style.transition = '2.2s ease';
 		document.getElementById('explore').style.opacity = '0';
 	}else{	document.getElementById('hanz-name').style.opacity = '1';
 		document.getElementById('hanz-tag').style.opacity = '1';
 		document.getElementById('explore').style.opacity = '1';
-		document.getElementById('explore').style.transition = '0.3s ease';
 	}
 })
+let loading = document.getElementById('loadOverlay');
+	window.addEventListener("load", () => {
+		loading.style.display = "none";
+	})
+function goBack() {
+  window.history.back();
+}
