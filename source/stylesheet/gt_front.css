@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+nav *{
+	margin:0;
+	padding: 0;
+	outline: none;
+	border:none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Poppins",arial;
+}
+body{
+	background-size: 100vw;
+	background-repeat: no-repeat;
+	background-color: #343434;
+}
+nav{
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	width: 90px;
+	background: rgba(255,255,255,1);
+	overflow: hidden;
+	transition: width 0.2s linear;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+	
+	transition: all 0.5s ease;
+	animation: navbar-anim 2s;
+}
+@keyframes navbar-anim{
+	from{
+		width:10px;
+	}
+	to{
+		width:90px;
+	}
+}
+.logo{
+	margin: 6px;
+	text-align: center;
+	display: flex;
+	transition: all 0.5s ease;
+}
+.logo img{
+	width: 60px;
+	height:60px;
+	font-weight: bold;
+	padding: 15px;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+.logo span{
+	padding-top: 5px;
+	font-weight: bold;
+	padding-left: 15px;
+	font-size:18px;
+	text-transform:uppercase;
+}
+nav a{
+	position: relative;
+	color: rgb(0,0,0);
+	font-size: 14px;
+	display: table;
+	width: 300px;
+	padding: 10px;
+	transition:all 0.5s ease;
+}
+.whitea{
+	color:white;
+}
+.fas{
+	position: relative;
+	width: 70px;
+	height: 40px;
+	top: 14px;
+	font-size: 20px;
+	text-align:center;
+}
+.nav-item{
+	position: relative;
+	top: 12px;
+	margin-left: 10px;
+}
+nav a:hover{
+	background:#031738;
+	color: white;
+}
+nav:hover{
+	width:300px;
+	background: rgba(255,255,255,1);
+}
+.logout{
+	position: absolute;
+	bottom: 0;
+}
+
+footer{
+	margin-top: 100px;
+	display: flex;
+	width:100%;
+	height: 300px;
+	background-color: #222222;
+}
+.f-fi{
+	margin-left: 93px;
+	display: flex;
+	width: 25%;
+
+	border-right:1px solid rgba(255,255,255,.3);
+}
+.fi-img{
+	margin-top: 100px;
+	display: flex;
+	width: 100%
+}
+.fi-img img{
+	margin-left: 40px;
+	width: 100px;
+	height:80px;
+
+}
+.fi-img h2{
+	margin-left: 20px;
+	margin-top: 45px;
+	color: white;
+	font-weight: bold;
+	font-family: 'Poppins',arial;
+
+}
+.f-con h1{
+	font-family: 'Poppins',arial;
+	color: white;
+	margin-top: 40px;
+	margin-left: 20px;
+}
+.f-con p{
+	font-family: arial;
+	color: white;
+	margin-left: 20px;
+	font-size: 12px;
+}
+.f-link{
+	margin-left: 20px;
+	margin-top: 30px;
+}
+.f-link a{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Poppins',arial;
+	margin-right: 20px;
+	font-weight: bold;
+}
+.f-linkb{
+	margin-top: 20px;
+	width: 55vw;
+	background-color: rgba(255,255,255,.3);
+	height:3px;
+}
+.linked{
+	margin-top: 20px;
+	display: flex;
+}
+.gmail{
+	display: flex;
+}
+.gmail i{
+	font-size: 20px;
+	color: white
+}
+.gmail a{
+	text-transform: lowercase;
+	font-size: 12px;
+	margin-top: 1px;
+	margin-left: 5px;
+	font-weight: normal;
+}
+.copy{
+
+	cursor: normal;
+}
+.content{
+	display: flex;
+	width:100%;
+}
+.nav-ex{
+	width: 95px;
+	height:93px;
+	background-color: #5B5B5B;
+}
+.con-utama{
+	display: flex;
+	width:100%;
+}
+.header-first{
+	display: block;
+	padding:20px 0 20px 0;
+	width:100%;
+	background-color: #5B5B5B;
+}
+.header-first h2{
+	color:white;
+	margin-left: 20px;
+	font-family: 'Poppins',arial;
+	width:100%;
+}
+.header-first p{
+	margin:0 0 0 20px;
+	font-family: 'Poppins',arial;
+	color: white;
+	font-size: 12px;
+}
+.con-list{
+	width:100%;
+	display: block;
+}
+.con-list h2{
+	color: #ffff;
+	margin-left: 40px;
+	margin-top: 20px;
+	font-family: arial;
+	width:200px;
+	border-bottom: 2px solid rgba(255,255,255,.5);
+}
+.sub-con{
+	display: block;
+	width: 100%;
+}
+.con-list h1{
+	color: white;
+	font-family: 'Poppins',arial;
+	margin:40px;
+}
+.con-list img{
+	margin-left: 40px;
+	width:200px;
+	border-radius: 5px;
+}
+.line-f{
+	margin:20px 20px 20px 40px;
+	height:5px;
+	width:220px;
+	background-color: rgba(255,255,255,.2);
+}
+.con-list p{
+	color: white;
+	font-family: 'Poppins',arial;
+	margin-left: 40px;
+	width:800px;
+}
+.sys{
+	margin-top: 20px;
+}
+.con-list a{
+	margin:40px;
+	background-color: #FF002C;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	font-family: 'Poppins',arial;
+	color: white;
+}
+.con-list h3{
+	color: white;
+	margin-top: 40px;
+	margin-left: 40px;
+	font-family: 'Poppins',arial;
+}
+
+.sosmed{
+	padding:10px;
+	overflow-x: hidden;
+	position: fixed;
+	z-index: 5;
+	right:20px;
+	background-color: rgba(255,255,255,1);
+	box-shadow: 0 0 5px gray;
+	border-radius: 10px;
+	bottom:20px;
+	width:45px;
+	transition: all 0.5s ease;
+}
+.sosmed a{
+	text-decoration: none;
+	display: flex;
+	transition: all 0.3s ease;
+}
+.sosmed:hover{
+	width: 130px;
+}
+.sosmed a:hover{
+	transform: scale(.9);
+}
+.sosmed a i{
+	color: blue;
+	width: 40px;
+	margin-bottom: 20px;
+	font-size:35px;
+}
+.sosmed a:first-child{
+	margin-left:5px;
+}
+.sosmed a:nth-child(2) i{
+	color: red;
+	margin-left:2px;
+}
+.sosmed a:nth-child(3) i{
+	color: black;
+	margin-left:5px;
+}
+ .sosmed a:nth-child(4) i{
+
+ 	color:blue;
+ }
+.after{
+	margin-top: 100px;
+}
+.sosmed h3{
+	display: flex;
+	opacity: 1;
+	font-size: 14px;
+	font-family: arial;
+	margin-left: 20px;
+	margin-top:10px;
+	transition: 0.3s ease;
+	color: black;
+}
+.comment{
+	margin-top: 20px;
+	margin-left: 20px;
+	padding-top: 10px;
+	width: 80%;
+	display: block;
+	border-radius: 5px;
+	background-color: gray;
+}
+.comment form{
+	display: block;
+	margin:20px;
+}
+.comment form input{
+	display: block;
+	width:200px;
+	height:20px;
+	padding: 10px;
+	border-radius: 2px;
+	border: none;
+	font-family: 'Poppins',arial;
+	outline: none;
+}
+.comment form textarea{
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 2px;
+	outline: none;
+	font-family: 'Poppins',arial;
+}
+.btn{
+	display: flex;
+}
+.comment form button{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width:220px;
+	padding: 10px;
+	background-color: rgba(0,108,255,.3);
+	font-family: arial;
+	font-weight: bold;
+	color: white;
+	border:none;
+	transition: all 0.3s ease;
+}
+.comment form button:hover{
+	background-color: rgba(0,108,255,1);
+	box-shadow:0 0 10px #79C0FF;
+}
+.board{
+	width:100%;
+	display: flex;
+	height:560px;
+}
+.c-board{
+	margin:auto;
+	width: 95%;
+	height:500px;
+	border-radius: 5px;
+	overflow-y: scroll;
+	background-color:rgba(255,255,255,.5);
+}
+.d-cm{
+	background-color: white;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 80%;
+}
+.d-cm p{
+	margin:20px;
+	padding-top: 10px;
+	width:auto;
+}
+.d-cm p:first-child{
+	color: black;
+	font-family: arial;
+}
+.d-cm p:nth-child(2){
+	padding: 0;
+	color: #595959;
+	margin-top: -10px;
+	padding-bottom: 10px;
+	overflow-x:hidden;
+}
+.pc{
+	display: none;
+}
+.popup{
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	transition: 0.3s ease;
+	background-color: rgba(0,0,0,.6);
+}
+@keyframes popupon{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+.canvas-popup{
+	margin: auto;
+	width: 75%;
+	height: 75%;
+	padding:20px;
+	background-color: #E9E9E9;
+	box-shadow: 0 0 50px black;
+	z-index: 10;
+	border-radius: 5px;
+	transition: 0.3s ease;
+	overflow-y: scroll;
+}
+.canvas-popup:hover{
+	transform: scale(1.02);
+	box-shadow: 0 0 25px black;
+}
+#btn-popup{
+	width: 50px;
+	padding: 12px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 11;
+	transform: scale(.9);
+	transition: all 0.5s ease;
+}
+#btn-popup:hover{
+	transform: rotate(180deg) scale(1);
+}
+.overlay{
+	z-index: 99;
+	position: fixed;
+	width:100%;
+	height: 100%;
+	background-color: white;
+}
+.overflex{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.loading{
+	margin: auto;
+	width: 200px;
+	justify-content: space-between;
+	display: flex;
+}
+.bar{
+	margin: auto;
+	width: 20px;
+	height: 10px;
+	background-color: red;
+}
+.bar{
+	animation: load 1s infinite;	
+}
+.bar:nth-child(2){
+	animation-delay: .1s;
+}
+.bar:nth-child(3){
+	animation-delay: .2s;
+}
+.bar:nth-child(4){
+	animation-delay: .3s;
+}
+.bar:nth-child(5){
+	animation-delay: .4s;
+}
+.bar:nth-child(6){
+	animation-delay: .5s;
+}
+@keyframes load {
+	from{
+		padding-top:0px;
+		opacity: 1;
+		background-color: red;
+	}
+	50%{
+		padding-top:100px;
+		background-color: #FFDF00;
+	}
+	to{
+		padding-bottom: 0px;
+		opacity: 1;
+		background-color: red;
+	}
+}

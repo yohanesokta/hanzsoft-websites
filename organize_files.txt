@@ -1,0 +1,32 @@
+file ini berisi tentang apa yang di pakai dalam sebuah page
+
+[Home]
+
+Page	= index.html
+js		= source/javascript/index.js
+css		= source/stylesheet/home_style.css
+img		= 'source/img/head_logo.png'
+		  'source/img/home_background.jpg'
+		  'source/img/run-gif-5.gif'
+cdn		= 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
+		  'https://fonts.googleapis.com/css2?family=Poppins&display=swap'
+		  'https://fonts.googleapis.com/css2?family=Secular+One&display=swap'
+
+[folder,file and function]
+js       	= source/javascript/
+dw_first.js = javascript for downloder page
+index.js 	= javascript for home page
+css 		= source/stylesheet
+dw_first 	= css for downloader page
+gt_front 	= css for get.php
+favicon 	= source/favicon.ico
+img			= source/img/*.webp
+
+[confiq]
+connect.php = connecting page to database
+send.php	= send comment on downloder page
+g_send.php	= send comment on get.php
+
+
+
+Creative by Yohanes Oktanio or YhanzC Product
