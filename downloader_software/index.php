@@ -192,30 +192,14 @@
 							<div class="comment">
 								<form action="./#comen" method="post">
 									<input type="text" id="user_name" name="user_name" placeholder="Nama" required>
-									<textarea name="txt" id="txt" cols="100" rows="4" required placeholder="komentar"></textarea>
+									<textarea name="txt" id="txt" cols="50" rows="4" required placeholder="komentar"></textarea>
 									<div class="btn">
 									<button type="submit" name="submit" id="comen">Add Comment</button>
 									</div>
 								</form>
 								<div class="board">
 									<div class="c-board">
-										<?php 
-											 $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = 1 ORDER BY no Desc");
-											 while ($cm = mysqli_fetch_assoc($cm_result)) {
-											     
-										 ?>
-										<!-- komentar -->
-										<div class="div_comment">
-											<div class="comen">
-												<p><?php echo $cm['nama']; ?></p>
-												<div class="comen-txt">
-													<p><?php echo $cm['isi']; ?></p>
-												</div>
-											</div>
-										</div>
-
-									<?php } ?>
-										<!-- end comment -->
+										<!-- isi Komen -->
 									</div>
 								</div>
 							</div>
@@ -258,6 +242,37 @@
 			</div>
 		</div>
 	</footer>
+	
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../source/javascript/dw_first.js"></script>
+	<script>
+	$(document).ready(function() {
+			loadData();
+			$('form').on('submit',function(e){
+			e.preventDefault();
+			InputText();
+		})
+		});
+	function loadData(){
+		$.get('../config/get_data_index.php',function(data){
+		$('.c-board').html(data);
+	});
+	}
+	function InputText(){
+			let username = $("#user_name").val();
+			let text = $("#txt").val();
+
+			$.ajax({
+				url: '../config/send.php',
+				type: 'POST',
+				data:"username="+username+"&txt="+text,
+			})
+			.done(function(data) {
+				$("#txt").val("");
+				loadData();
+			});
+			
+		}
+	</script>
 </body>
 </html>

@@ -401,6 +401,19 @@ footer{
 	margin-top: 20px;
 	margin-left: 20px;
 	width: 80%;
+	transition: left 1s ease;
+	animation: fade 1s;
+}
+@keyframes fade{
+	from{
+		transform: translate(0,-100px);
+		opacity:0;
+	}
+	to{
+
+		transform: translate(0,0);
+		opacity: 1;
+	}
 }
 .d-cm p{
 	margin:20px;

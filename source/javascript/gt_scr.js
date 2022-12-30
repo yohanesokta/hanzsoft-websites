@@ -43,3 +43,4 @@ let loading = document.getElementById('loadOverlay');
 	function goBack() {
   window.history.back();
 }
+// ajax

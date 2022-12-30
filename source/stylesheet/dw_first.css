@@ -438,6 +438,18 @@ footer{
 	display: block;
 	width: 75%;
 	margin-top: 20px;
+	animation: fade 1s;
+}
+@keyframes fade{
+	from{
+		transform: translate(0,-100px);
+		opacity:0;
+	}
+	to{
+
+		transform: translate(0,0);
+		opacity: 1;
+	}
 }
 .comen{
 	display: inline-block;

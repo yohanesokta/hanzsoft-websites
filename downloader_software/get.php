@@ -4,11 +4,6 @@
  $result = mysqli_query($db,"SELECT * FROM  f_soft WHERE nsi = $nsi_p");
  $data = mysqli_fetch_assoc($result);
  $tutor = $data['tutor'];
-  if (isset($_POST["submit"])){
- 		require '../config/g_send.php';
- 		send($_POST,$nsi_p);
-	    $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = $nsi_p ORDER BY no Desc");
-} 
 
  ?>
 <!DOCTYPE html>
@@ -151,27 +146,17 @@
 							<h2>Suka Dengan Halaman Ini ?</h2>
 							<p>Berikan pengalamanmu ke kolom komentar dibawah !</p>
 							<div class="comment">
-								<form action="" method="post">
+								<form action="" method="POST">
 									<input type="text" id="user_name" name="user_name" placeholder="Nama" required>
-									<textarea name="txt" id="txt" cols="100" rows="4" required placeholder="komentar"></textarea>
+									<textarea name="txt" id="txt" cols="50" rows="4" required placeholder="komentar"></textarea>
 									<div class="btn">
 									<button type="submit" name="submit" id="c_men">Add Comment</button>
 									</div>
 								</form>
 								<div class="board">
 									<div class="c-board">
-										<?php 
-											 $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = $nsi_p ORDER BY no Desc");
-											 while ($cm = mysqli_fetch_assoc($cm_result)) {
-											     
-										 ?>
-										<!-- komentar -->
-										<div class="d-cm">
-											<p>	<?php echo $cm['nama']; ?></p>
-											<p><?php echo $cm['isi']; ?></p>
-										</div>
-									<?php } ?>
 										<!-- end comment -->
+										
 									</div>
 								</div>
 							</div>
@@ -214,6 +199,45 @@
 			</div>
 		</div>
 	</footer>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../source/javascript/gt_scr.js"></script>
+	<script>
+
+
+	$(document).ready(function(){
+		loadData();
+		$('form').on('submit',function(e){
+			e.preventDefault();
+			InputText();
+		})
+
+	// input
+		function InputText(){
+			let username = $("#user_name").val();
+			let text = $("#txt").val();
+			let nsi = <?php echo $nsi_p; ?>;
+
+			$.ajax({
+				url: '../config/g_send.php',
+				type: 'POST',
+				data:"username="+username+"&txt="+text+"&nsi="+nsi,
+			})
+			.done(function(data) {
+				$("#txt").val("");
+				loadData();
+			});
+			
+		}
+
+	// end input
+
+	});
+
+		function loadData(){
+	$.get('../config/get_data_get.php?nsi=<?php echo $nsi_p?>',function(data){
+		$('.c-board').html(data);
+	});
+}
+	</script>
 </body>
 </html>
