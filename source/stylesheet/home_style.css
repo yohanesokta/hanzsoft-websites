@@ -365,17 +365,12 @@ footer{
 }
 @keyframes load {
 	from{
-		padding-top:0px;
-		opacity: 1;
 		background-color: red;
 	}
 	50%{
-		padding-top:100px;
 		background-color: #FFDF00;
 	}
 	to{
-		padding-bottom: 0px;
-		opacity: 1;
 		background-color: red;
 	}
 }

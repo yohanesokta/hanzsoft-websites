@@ -379,7 +379,7 @@ footer{
 	width: 80%;
 	display: block;
 	border-radius: 5px;
-	background-color: gray;
+	background-color: rgba(0, 0, 0, .2);
 }
 .comment form{
 	display: block;
@@ -392,6 +392,7 @@ footer{
 	padding: 10px;
 	border-radius: 2px;
 	border: none;
+	box-shadow: 0 0 10px gray;
 	font-family: 'Poppins',arial;
 	outline: none;
 }
@@ -400,17 +401,19 @@ footer{
 	padding: 10px;
 	border-radius: 2px;
 	outline: none;
+	border: none;
+	box-shadow: 0 0 10px gray;
 	font-family: 'Poppins',arial;
 }
 .btn{
 	display: flex;
 }
 .comment form button{
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-bottom: 10px;
 	width:220px;
 	padding: 10px;
-	background-color: rgba(0,108,255,.3);
+	background-color: rgba(0,108,255,1);
 	font-family: arial;
 	font-weight: bold;
 	color: white;
@@ -418,8 +421,9 @@ footer{
 	transition: all 0.3s ease;
 }
 .comment form button:hover{
-	background-color: rgba(0,108,255,1);
-	box-shadow:0 0 10px #79C0FF;
+	background-color: rgba(0,108,255,.5);
+	transform: scale(.9);
+	box-shadow:0 0 40px #79C0FF;
 }
 .board{
 	width:100%;
@@ -456,6 +460,7 @@ footer{
 	padding: 10px;
 	background-color: rgba(255,255,255,1);
 	margin-left: 10px;
+	box-shadow:0 0 10px gray;
 	border-radius: 0 10px 10px 10px;
 
 }
@@ -521,17 +526,12 @@ footer{
 }
 @keyframes load {
 	from{
-		padding-top:0px;
-		opacity: 1;
 		background-color: red;
 	}
 	50%{
-		padding-top:100px;
 		background-color: #FFDF00;
 	}
 	to{
-		padding-bottom: 0px;
-		opacity: 1;
 		background-color: red;
 	}
 }

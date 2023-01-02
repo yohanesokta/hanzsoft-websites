@@ -1,3 +1,3 @@
 <?php 	
-$db = mysqli_connect("localhost","root","","db_hanzsoft");
+$db = mysqli_connect("localhost:3306","root","","db_hanzsoft");
  ?>
