@@ -154,6 +154,7 @@
 									</div>
 								</form>
 								<div class="board">
+									<button class="r-btn" id="rbtn"><i class="fa-solid fa-rotate"></i></button>
 									<div class="c-board">
 										<!-- end comment -->
 										
@@ -234,7 +235,9 @@
 	});
 
 		function loadData(){
-	$.get('../config/get_data_get.php?nsi=<?php echo $nsi_p?>',function(data){
+// use ajax
+
+	$.post('../config/get_data_get.php?nsi=<?php echo $nsi_p?>',function(data){
 		$('.c-board').html(data);
 	});
 }

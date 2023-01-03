@@ -1,6 +1,7 @@
 if (window.history.replaceState){
 			window.history.replaceState(null,null,window.location.href);
 		}
+let rBtn = document.getElementById('rbtn');
 let card = document.getElementsByClassName('card');
 let image = document.getElementsByClassName('imgSoft');
 	for (let lg=0; lg< card.length; lg++){
@@ -34,4 +35,9 @@ let loading = document.getElementById('loadOverlay');
 	})
 function goBack() {
   window.history.back();
+}
+rBtn.onclick = function(){
+	rBtn.style.opacity = '0';
+	loadData();
+	rBtn.style.opacity = '1';
 }

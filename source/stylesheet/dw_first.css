@@ -535,3 +535,27 @@ footer{
 		background-color: red;
 	}
 }
+.r-btn{
+	position: absolute;
+	z-index: 10;
+	padding: 10px;
+	left: 1050px;
+	outline: none;
+	transition: all 0.3s ease;
+	border: none;
+	font-family: sans-serif;
+	animation: rbtn-on 3s;
+}
+.r-btn:hover{
+	background-color:#E6E6E6;
+	transform: scale(1.4);
+	color: white;
+}
+@keyframes rbtn-on{
+	from,80%{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}

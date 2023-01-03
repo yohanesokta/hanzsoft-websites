@@ -1,6 +1,7 @@
 let btnXPopup = document.getElementById("btn-popup");
 let popup = document.getElementById('popup');
 let btnPopup = document.getElementById('tutor');
+let rBtn = document.getElementById('rbtn');
 popup.style.display = 'none';
 
 
@@ -44,3 +45,9 @@ let loading = document.getElementById('loadOverlay');
   window.history.back();
 }
 // ajax
+
+rBtn.onclick = function(){
+	rBtn.style.opacity = '0';
+	loadData();
+	rBtn.style.opacity = '1';
+}
