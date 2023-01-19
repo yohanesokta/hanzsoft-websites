@@ -7,10 +7,10 @@
 
 Makes everything simpler. because the use of the database will facilitate editing.
 
-- Use Sql Databases
+- Use Datanase
 - Auto Edited
 - smaller file and simple
-- use Jquer for Ajax
+- Ajax Jquery
 
 #
 #
