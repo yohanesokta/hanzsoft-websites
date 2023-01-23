@@ -19,7 +19,7 @@
 	<meta http-equiv="pragma" content="no-cache">
 	<!--  -->
 	<title>Hanzsoft | <?php echo $data['nama']; ?></title>
-	<link rel="icon" type="image/x-icon" href="../source/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="../source/img/head-logo.png">
 	<link rel="stylesheet" href='../source/stylesheet/gt_front.css'>
 	<link rel="stylesheet" href="../source/mobile_css/gt_mb.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -76,7 +76,7 @@
 				<i class="fas fa-address-card"></i>
 				<span class="nav-item">About</span>
 			</a></li>
-			<li><a href="http://yohanesokta.my-board.org/"id="trans6">
+			<li><a href="  https://yohanesokta.github.io/portofolio"id="trans6">
 				<i class="fas fa-user"></i>
 				<span class="nav-item">Profile</span>
 			</a></li>
@@ -200,47 +200,11 @@
 			</div>
 		</div>
 	</footer>
-	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="../source/javascript/gt_scr.js"></script>
-	<script>
-
-
-	$(document).ready(function(){
-		loadData();
-		$('form').on('submit',function(e){
-			e.preventDefault();
-			InputText();
-		})
-
-	// input
-		function InputText(){
-			let username = $("#user_name").val();
-			let text = $("#txt").val();
-			let nsi = <?php echo $nsi_p; ?>;
-
-			$.ajax({
-				url: '../config/g_send.php',
-				type: 'POST',
-				data:"username="+username+"&txt="+text+"&nsi="+nsi,
-			})
-			.done(function(data) {
-				$("#txt").val("");
-				loadData();
-			});
-			
-		}
-
-	// end input
-
-	});
-
-		function loadData(){
-// use ajax
-
-	$.post('../config/get_data_get.php?nsi=<?php echo $nsi_p?>',function(data){
-		$('.c-board').html(data);
-	});
-}
+	<script type="text/javascript">
+		let nsi = <?php echo $nsi_p; ?>;
 	</script>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../source/javascript/get-download.js"></script>
+	<script src="../source/javascript/get-download.jquery.js"></script>
 </body>
 </html>

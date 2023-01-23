@@ -6,8 +6,10 @@
  		require '../config/send.php';
  		send($_POST);
 	    $cm_result = mysqli_query($db,"SELECT * FROM  comment WHERE type = 1 ORDER BY no Desc");
-} 
+}
  ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,17 +21,11 @@
 	<meta http-equiv="expires" content="0">
 	<meta http-equiv="expires" content="Tue,01 jan 1980 1:00:00 GMT">
 	<meta http-equiv="pragma" content="no-cache">
-	<!--  -->
 	<title>Hanzsoft | Downlod Software</title>
 	<link rel="stylesheet" href='../source/stylesheet/dw_first.css'>
 	<link rel="stylesheet" href="../source/mobile_css/dw_mb.css">
-	<link rel="icon" type="image/x-icon" href="../source/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="../source/img/head-logo.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-	<script>
-		if (window.history.replaceState){
-			window.history.replaceState(null,null,window.location.href);
-		}
-	</script>
 </head>
 <body id="Body">
 	<div class="overlay" id="loadOverlay">
@@ -69,7 +65,7 @@
 				<i class="fas fa-address-card"></i>
 				<span class="nav-item">About</span>
 			</a></li>
-			<li><a href="http://yohanesokta.my-board.org/"id="trans6">
+			<li><a href="  https://yohanesokta.github.io/portofolio"id="trans6">
 				<i class="fas fa-user"></i>
 				<span class="nav-item">Profile</span>
 			</a></li>
@@ -113,7 +109,6 @@
 		<div class="nav-ex">
 		</div>
 		<div class="con-utama">
-			<!-- buat apapun di con utama -->
 			<div class="sub-con">
 				<div class="header-first">
 					<h2>Hanz Soft Software Download - Best Software & Apps</h2>
@@ -122,19 +117,11 @@
 				<div class="con-list">
 					<h2>Gets Software</h2>
 					<?php $i=1; while( $data = mysqli_fetch_assoc($result)){ ?>
-
-
 							<?php if($i== 3){ $i=1;?>
 							<div class="tab-line"></div>
-
 							<?php } ?>
-
-
 						<div class="m-cr">
 							<div class="cr">
-								
-
-
 								<?php 
 									$d = $data['n-one'];
 									$prd = mysqli_query($db,"SELECT * FROM f_soft WHERE nsi = $d");
@@ -179,13 +166,7 @@
 
 							</div>
 						</div>
-
-						
-
-
 		<?php $i++;} ?>
-
-						
 						<div class="after">
 							<h2>Suka Dengan Halaman Ini ?</h2>
 							<p>Berikan pengalamanmu ke kolom komentar dibawah !</p>
@@ -210,7 +191,6 @@
 		</div>
 	</div>
 
-	<!-- footer -->
 	<footer id="footer">
 		<div class="f-fi">
 			<div class="fi-img">
@@ -245,34 +225,7 @@
 	</footer>
 	
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="../source/javascript/dw_first.js"></script>
-	<script>
-	$(document).ready(function() {
-			loadData();
-			$('form').on('submit',function(e){
-			e.preventDefault();
-			InputText();
-		})
-		});
-	function loadData(){
-		$.post('../config/get_data_index.php',function(data){
-		$('.c-board').html(data);
-	});
-	}
-	function InputText(){
-			let username = $("#user_name").val();
-			let text = $("#txt").val();
-
-			$.ajax({
-				url: '../config/send.php',
-				type: 'POST',
-				data:"username="+username+"&txt="+text,
-			})
-			.done(function(data) {
-				$("#txt").val("");
-				loadData();
-			});	
-		}
-	</script>
+	<script src="../source/javascript/downloader.js"></script>
+	<script src="../source/javascript/downloader.jquery.js"></script>
 </body>
 </html>

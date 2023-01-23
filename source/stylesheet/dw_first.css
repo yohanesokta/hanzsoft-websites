@@ -269,6 +269,9 @@ footer{
 	border-radius: 30px;
 	transform: scale(1.05);
 }
+.card:hover img{
+	border-radius: 50%;
+}
 .card img{
 
 	width: 80px;
