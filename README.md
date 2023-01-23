@@ -7,10 +7,12 @@
 
 Makes everything simpler. because the use of the database will facilitate editing.
 
-- Use Datanase
-- Auto Edited
+
+- refresing automatic
+- add comment
 - smaller file and simple
-- Ajax Jquery
+- make whitout freamwork (only jquery)
+- 
 
 #
 #
@@ -21,3 +23,7 @@ Makes everything simpler. because the use of the database will facilitate editin
   ```sh
     https://hanzsoft.fast-page.org
   ```
+
+## Updating
+
+website ini maih dalam pengembangan kalian bisa join atau clone project ini bebas.
