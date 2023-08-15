@@ -15,7 +15,7 @@
                         <a href="/hekki" class="item d-flex">
                             <img class="item-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy2rZXVqdTIan_ZvZgKmvWLIkqoDRL27Jpv0s2C0PRItXttx99eNgoBlpj_e41NWpp2_U&usqp=CAU" alt="">
                             <div class="item-info">
-                                <p class="item-name">Corel Draw</p>
+                                <p class="item-name">{{ $title }}</p>
                                 <p class="item-ver">v1.1</p>
                                 <p class="item-use">info Aplikasi</p>
                             </div>

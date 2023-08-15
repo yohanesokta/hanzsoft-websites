@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\Datacenter;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function (){
     return view('homepage');
 });
-Route::get('/Store', function() {
-    return view('store');
-});
+
+Route::get('/Store',[Datacenter::class,'store']);
