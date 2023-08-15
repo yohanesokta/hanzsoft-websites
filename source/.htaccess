@@ -1,5 +1,0 @@
-ErrorDocument 404 http://repairing-yohanes.22web.org/404.html
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-Options -Indexes
