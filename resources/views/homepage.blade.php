@@ -44,7 +44,6 @@
 			</a></li>
 		</ul>
 	</nav>
-
 	<div class="hero">
 		<div class="name">
 			<h1 id="hanz-name">HANZ SOFT 5.x</h1>
