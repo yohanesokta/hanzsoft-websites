@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class Datacenter extends Controller
@@ -13,8 +13,11 @@ class Datacenter extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(){
+
+        $var = DB::table('Software')->get();
+
         return view('store',[
-            'title' => 'Corel AI'
+            'data' => $var
         ]);
     }
 }

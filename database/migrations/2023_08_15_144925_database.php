@@ -17,12 +17,17 @@ class Database extends Migration
             $table->id();
             $table->string('name');
             $table->string('category');
-            $table->string('ver');
-            $table->string('info');
-            $table->string('size');
-            $table->string('req');
+            $table->string('ver')->default('none');
+            $table->string('info')->default('none');
+            $table->string('size')->default('undetected');
+            $table->string('req')->default('no-requerements');
             $table->string('download');
             $table->string('icon');
+        });
+
+        Schema::create(table:'Kategori',callback:function(Blueprint $table){
+            $table->id();
+            $table->string('category');
         });
     }
 
@@ -33,6 +38,7 @@ class Database extends Migration
      */
     public function down()
     {
-        Schema::dropDatabaseIfExists('Software');
+        Schema::dropIfExists('Software');
+        Schema::dropIfExists('Kategori');
     }
 }

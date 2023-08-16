@@ -11,16 +11,20 @@
             <div class="d-flex container">
                 <div class="item-list row row-cols-4">
 
+                    @foreach ($data as $Data)
+
                     <div class="col">
                         <a href="/hekki" class="item d-flex">
-                            <img class="item-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy2rZXVqdTIan_ZvZgKmvWLIkqoDRL27Jpv0s2C0PRItXttx99eNgoBlpj_e41NWpp2_U&usqp=CAU" alt="">
+                            <img class="item-img" src={{ $Data->icon }} alt="">
                             <div class="item-info">
-                                <p class="item-name">{{ $title }}</p>
-                                <p class="item-ver">v1.1</p>
-                                <p class="item-use">info Aplikasi</p>
+                                <p class="item-name">{{ $Data->name }}</p>
+                                <p class="item-ver">{{ $Data->ver }}</p>
+                                <p class="item-use">{{ $Data->info }}</p>
                             </div>
                         </a>
                     </div>
+
+                    @endforeach
 
                 </div>
             </div>
@@ -28,4 +32,3 @@
     </div>
 
 @endsection
-
