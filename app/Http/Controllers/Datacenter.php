@@ -15,9 +15,10 @@ class Datacenter extends Controller
     public function store(){
 
         $var = DB::table('Software')->get();
-
+        $cat = DB::table('Kategori')->get();
         return view('store',[
-            'data' => $var
+            'data' => $var,
+            'category'=>$cat
         ]);
     }
 }

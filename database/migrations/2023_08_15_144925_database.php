@@ -22,12 +22,13 @@ class Database extends Migration
             $table->string('size')->default('undetected');
             $table->string('req')->default('no-requerements');
             $table->string('download');
-            $table->string('icon');
+            $table->string('icon')->default('https://icons.veryicon.com/png/o/miscellaneous/myicon-1/none-1.png');
         });
 
         Schema::create(table:'Kategori',callback:function(Blueprint $table){
             $table->id();
             $table->string('category');
+            $table->string('background');
         });
     }
 
