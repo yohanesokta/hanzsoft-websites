@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <link rel="shortcut icon" href="/res/img/head-logo.png" type="image/x-icon">
     <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanzsoft | Store {{$req->s ?? '' }} </title>
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="/res/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/res/css/store.css">
     @yield('customStyle')
+    <link rel="stylesheet" href="/res/css/responsive.css">
 </head>
 <body>
     <div class="animate" id="animate">

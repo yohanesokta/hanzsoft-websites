@@ -27,7 +27,7 @@ Build : Normal Build Laravel
 
     run
 
-    $ php artisan serve
+    $ php artisan serve``
 
 ## Dengan Framework Laravel
 
