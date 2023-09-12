@@ -13,14 +13,30 @@
             </div>
         </div>
 
-        <div class="data-download">
+        <a class="data-download" href="{{$data->download}}" target="_blank">
             <i class="fa-solid fa-circle-down"></i>
-           <a href="{{$data->download}}" target="_blank">Download</a>
-        </div>
+           <p>Download</p>
+        </a>
     </div>
-    <div class="info">
-        <img src="{{$data->prev}}" alt="preview image">
-        <p>{{$data->description}}</p>
+    <div class="get-info">
+        <div class="info">
+            <img src="{{$data->prev}}" alt="preview image">
+            <p>{{$data->description}}</p>
+        </div>
+        <div class="iklan">
+            <div class="isi-iklan">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'f5ff9da62cc95749274362b679014a19',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                    document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/f5ff9da62cc95749274362b679014a19/invoke.js"></scr' + 'ipt>');
+                </script>
+            </div>
+        </div>
     </div>
 
 @include('components.footer')

@@ -25,6 +25,32 @@
             </div>
         </div>
     </div>
+<style>
+    .iklan{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+    }
+    .isi-iklan{
+        margin: auto;
+        border-radius: 10%;
+    }
+</style>
 
+<div class="iklan">
+    <div class="isi-iklan">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'a1a8997099c31f092d76bd039627585e',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/a1a8997099c31f092d76bd039627585e/invoke.js"></scr' + 'ipt>');
+        </script>
+    </div>
+</div>
 
 @endsection

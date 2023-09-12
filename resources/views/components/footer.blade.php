@@ -7,25 +7,18 @@
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #3b5998;"
-          href="#!"
+          href="https://www.facebook.com/yohanesoktanio"
           role="button"
           ><i class="fab fa-facebook-f"></i
         ></a>
 
         <!-- Twitter -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #55acee;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
 
         <!-- Google -->
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #dd4b39;"
-          href="#!"
+          href="mailto:yohanesoktayt72@gmail.com"
           role="button"
           ><i class="fab fa-google"></i
         ></a>
@@ -34,24 +27,15 @@
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #ac2bac;"
-          href="#!"
+          href="https://instagram.com/yohanesoktanio"
           role="button"
           ><i class="fab fa-instagram"></i
-        ></a>
-
-        <!-- Linkedin -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #0082ca;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-linkedin-in"></i
         ></a>
         <!-- Github -->
         <a
           class="btn text-white btn-floating m-1"
           style="background-color: #333333;"
-          href="#!"
+          href="https://github.com/yohanesokta"
           role="button"
           ><i class="fab fa-github"></i
         ></a>
@@ -62,8 +46,9 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.6);">
-      © 2023 Copyright:
-      <a class="text-white" target="_blank" style="text-decoration: none;" href="https://github.com/yohanesokta">Hanzsoft or YhanzC Product</a>
+       Copyright ©
+      <a class="text-white" target="_blank" style="text-decoration: none;" href="https://github.com/yohanesokta">YohanesOktanio or YhanzC Product </a>
+      2023
     </div>
     <!-- Copyright -->
   </footer>

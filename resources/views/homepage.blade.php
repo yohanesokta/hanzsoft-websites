@@ -34,9 +34,9 @@
 				<i class="fas fa-address-card"></i>
 				<span class="nav-item">About</span>
 			</a></li>
-			<li><a href="  https://yohanesokta.github.io/portofolio"id="trans6">
+			<li><a href="https://github.com/yohanesokta/hanzsoft-data-api"id="trans6">
 				<i class="fas fa-user"></i>
-				<span class="nav-item">Profile</span>
+				<span class="nav-item">API Repository</span>
 			</a></li>
 			<li><a onclick="goBack()" class="logout" id="trans7">
 				<i class="fas fa-sign-out-alt"></i>
@@ -91,9 +91,9 @@
 			<p>Yohanes Oktanio or YhanzC Product made for school project or for fun!</p>
 			<div class="f-link">
 				<a href="#">Home</a>
-				<a href="">Software</a>
+				<a href="/Store">Software</a>
 				<a href="#about">About</a>
-				<a href="">Profile</a>
+				<a href="https://github.com/yohanesokta/hanzsoft-data-api">API Repository</a>
 				<div class="f-linkb"></div>
 				<div class="linked">
 					<div class="gmail">

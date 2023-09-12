@@ -27,22 +27,31 @@
     width: auto;
 }
 .data-download{
+    display: flex;
     position: absolute;
     margin-top: 20px;
     right: 40px;
     background-color: rgb(30, 136, 21);
-    color: white;
-    padding: 10px 15px;
     border-radius: 8px;
     font-size: 16px;
-}
-.data-download a{
-    margin-left: 5px;
     text-decoration: none;
-    color: white;
     font-weight: bold;
+    padding: 10px 15px 0 15px;
+    color: white;
     font-family: 'Open Sans';
 }
+.data-download p{
+    margin-left: 10px;
+}
+.data-download i{
+    font-size: 16px;
+    margin-top: 4px;
+}
+.get-info{
+    width: 100%;
+    display: flex;
+}
+
 .info{
     margin: 0 50px;
     width: 70%;
@@ -51,4 +60,11 @@
     width: 100%;
     border: 1px solid gray;
     margin: 20px 0;
+}
+.iklan{
+    width: 30%;
+}
+.isi-iklan{
+    position: absolute;
+    right: 25px;
 }
