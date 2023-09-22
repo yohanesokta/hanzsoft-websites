@@ -26,16 +26,16 @@ class Datacenter extends Controller
 
             $data = Http::get($API_URL)->object();
             return view('store',[
-                'data' => $data->software,
-                'category'=>$data->kategori,
+                'data' => $data->response->data->items,
+                'category'=>$data->response->data->kategori,
                 'req'=>$request,
                 'notap'=>true
             ]);
         }else{
 
-            $data = Http::get($API_URL.'?action=find&find='.$request->s)->object();
+            $data = Http::get($API_URL.'/find/'.$request->s)->object();
             return view('search',[
-                'data'=> $data->data,
+                'data'=> $data->response->data,
                 'req'=>$request
             ]);
         }
@@ -45,10 +45,9 @@ class Datacenter extends Controller
 
     public function select($id){
         $API_URL = env('API_URL');
-        $data = Http::get($API_URL.'?put='.$id)->object()->data[0];
+        $data = Http::get($API_URL.'/put/'.urldecode($id))->object();
         return view('select',[
-            "data"=>$data,
-            "tutor"=> Str::markdown($data->req)
+            "data"=> $data->response->data[0]
         ]);
     }
 }
