@@ -1,6 +1,7 @@
 @extends('components.front_store')
 
 @section('content')
+@if (!$err)
 
 <div style="width: 100%; height: 75px;"></div>
     <div class="item-box">
@@ -25,6 +26,10 @@
             </div>
         </div>
     </div>
+@else
 
+<p style="text-align:center; margin-top:20px">Data pencarian tidak ditemukan</p>
+
+@endif
 
 @endsection

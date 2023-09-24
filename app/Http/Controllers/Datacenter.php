@@ -34,10 +34,19 @@ class Datacenter extends Controller
         }else{
 
             $data = Http::get($API_URL.'/find/'.$request->s)->object();
-            return view('search',[
-                'data'=> $data->response->data,
-                'req'=>$request
-            ]);
+            $items = $data->response->data ?? null;
+            if(!$items == null) {
+                return view('search',[
+                    'data'=> $data->response->data,
+                    'req'=>$request,
+                    'err'=>false
+                ]);
+            }else{
+                return view('search',[
+                    'err'=> true,
+                    'req'=>$request
+                ]);
+            }
         }
 
 
