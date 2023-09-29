@@ -6,7 +6,15 @@
     <link rel="shortcut icon" href="/res/img/head-logo.png" type="image/x-icon">
     <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @php
+        $name = $data->nama ?? false
+    @endphp
+
+    @if(!$name == false )
+        <title>{{$name}} | {{$data->info}}</title>
+    @else
     <title>Hanzsoft | Store {{$req->s ?? '' }} </title>
+    @endif
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/res/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/res/css/store.css">
