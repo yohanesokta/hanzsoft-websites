@@ -7,11 +7,11 @@
     <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @php
-        $name = $data->nama ?? false
+        $name = $data[0]->nama ?? false
     @endphp
 
     @if(!$name == false )
-        <title>{{$name}} | {{$data->info}}</title>
+        <title>{{$name}} | {{$data[0]->info}}</title>
     @else
     <title>Hanzsoft | Store {{$req->s ?? '' }} </title>
     @endif
@@ -40,7 +40,7 @@
                 <a href="/Store#Online" class="tap">Online</a>
                 <a href="/Store#Multimedia" class="tap">Multimedia</a>
             @endif
-            <a href="https://github.com/yohanesokta" target="_blank">Github</a>
+            <a href="/about">About</a>
         </div>
         <div class="nav-right">
             <div class="search-button">

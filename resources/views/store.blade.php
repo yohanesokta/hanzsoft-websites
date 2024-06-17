@@ -3,7 +3,6 @@
 @section('content')
 
 @foreach ($category as $Cat)
-
     <div class="item-box">
         <div class="cros-item">
             <h1 id="{{$Cat->jenis}}">{{ $Cat->jenis }}</h1>

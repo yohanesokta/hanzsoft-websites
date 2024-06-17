@@ -17,11 +17,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/',function (){
+Route::get('/about',function (){
     return view('homepage');
 });
+Route::get('/Store',[Datacenter::class,'store'])->name('home');
 
-Route::get('/Store',[Datacenter::class,'store']);
-
+Route::get('/',function (){
+    return  Redirect::route('home');
+});
 
 Route::get('/Store/{id}', [Datacenter::class, 'select']);

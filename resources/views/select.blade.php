@@ -6,21 +6,21 @@
 @section('content')
     <div class="isi-data">
         <div class="isi-data-katalog">
-            <img src="{{$data->icon}}" alt="">
+            <img src="{{$data[0]->icon}}" alt="">
             <div class="katalog-info">
-                <p>{{$data->nama}}</p>
-                <span>{{$data->ver}}</span>
+                <p>{{$data[0]->nama}}</p>
+                <span>{{$data[0]->ver}}</span>
             </div>
         </div>
 
         <div class="data-download">
             <i class="fa-solid fa-circle-down"></i>
-           <a href="{{$data->download}}" target="_blank">Download</a>
+           <a href="{{$data[0]->download}}" target="_blank">Download</a>
         </div>
     </div>
     <div class="info">
-        <img src="{{$data->prev}}" alt="preview image">
-        <p>{{$data->description}}</p>
+        <img src="{{$data[0]->prev}}" alt="preview image">
+        <p>{{$data[0]->description}}</p>
     </div>
 
 @include('components.footer')

@@ -24,20 +24,22 @@ class Datacenter extends Controller
         $find = $request->s ?? false;
         if (!$find){
 
-            $data = Http::get($API_URL)->object();
+            $items = DB::table('items')->get();
+            $kategori = DB::table('kategori')->get();
             return view('store',[
-                'data' => $data->response->data->items,
-                'category'=>$data->response->data->kategori,
+                'data' => $items,
+                'category'=>$kategori,
                 'req'=>$request,
                 'notap'=>true
             ]);
         }else{
 
-            $data = Http::get($API_URL.'/find/'.$request->s)->object();
-            $items = $data->response->data ?? null;
-            if(!$items == null) {
+            $data = DB::table('items')->where('nama_query','like','%'.$request->s.'%')->get();
+
+
+            if(count($data) > 0) {
                 return view('search',[
-                    'data'=> $data->response->data,
+                    'data'=> $data,
                     'req'=>$request,
                     'err'=>false
                 ]);
@@ -53,10 +55,10 @@ class Datacenter extends Controller
     }
 
     public function select($id){
-        $API_URL = env('API_URL');
-        $data = Http::get($API_URL.'/put/'.urldecode($id))->object();
+        $item_name = urldecode($id);
+        $data = DB::table('items')->where('nama',$item_name)->get();
         return view('select',[
-            "data"=> $data->response->data[0]
+            "data"=> $data
         ]);
     }
 }
