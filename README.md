@@ -1,16 +1,13 @@
 project ini dibuat agustus 2022 , yohanes oktanio
 
-# Hanzsoft-Websites 5.x
+# Hanzsoft-Websites 5.2
 websites ini dibuat secara open source dan kalian dapat melihatnya secara public di <a href="http://hanzsoft.fast-page.org">hanzsoft - websites</a>
 
-### Apa yang baru di v(5.x)
-* penggunaan database Mongo DB
-* linkup api : <a href="https://github.com/yohanesokta/hanzsoft-data-api">hanzsoft-data-api</a>
-* laravel framework
-* fitur find
-* ( - ) penghapusan fitur comment
-* ui flexible (tidak mobile responsif)
-* loading optimizer
+### Apa yang baru di v(5.2)
+* Peforma Yang Lebih Bagus
+* Fitur Searching yang bagus
+* Tema Terbaru
+* Responsif Dalam Mobile dan Tablet
 
 ---
 **Server** | Google Drive server
@@ -27,7 +24,7 @@ Build : Normal Build Laravel
 
     run
 
-    $ php artisan serve``
+    $ php artisan serve
 
 ## Dengan Framework Laravel
 
