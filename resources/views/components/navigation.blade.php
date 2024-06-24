@@ -23,7 +23,7 @@
 </head>
 <body>
     {{-- nav --}}
-    <nav>
+    <nav id="navbar">
         <div class="logo" id="logo">
             <img src="/res/img/head-logo.png" alt="logo hanzsoft">
             <p>Hanzsoft</p>

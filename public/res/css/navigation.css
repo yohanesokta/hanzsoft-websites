@@ -49,6 +49,10 @@ nav{
         display: block;
         overflow: hidden;
     }
+    .logo{
+        width: auto;
+        width: 160px;
+    }
     .categori{
         flex-direction: column;
     }
