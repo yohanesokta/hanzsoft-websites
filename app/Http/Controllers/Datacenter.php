@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -17,36 +18,37 @@ class Datacenter extends Controller
      */
 
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $API_URL = env('API_URL');
         // find or not
 
         $find = $request->s ?? false;
-        if (!$find){
+        if (!$find) {
 
             $items = DB::table('items')->get();
             $kategori = DB::table('kategori')->get();
-            return view('store',[
+            return view('store', [
                 'data' => $items,
-                'category'=>$kategori,
-                'req'=>$request,
-                'notap'=>true
+                'category' => $kategori,
+                'req' => $request,
+                'notap' => true
             ]);
-        }else{
+        } else {
 
-            $data = DB::table('items')->where('nama_query','like','%'.$request->s.'%')->get();
+            $data = DB::table('items')->where('nama_query', 'like', '%' . $request->s . '%')->get();
 
 
-            if(count($data) > 0) {
-                return view('search',[
-                    'data'=> $data,
-                    'req'=>$request,
-                    'err'=>false
+            if (count($data) > 0) {
+                return view('search', [
+                    'data' => $data,
+                    'req' => $request,
+                    'err' => false
                 ]);
-            }else{
-                return view('search',[
-                    'err'=> true,
-                    'req'=>$request
+            } else {
+                return view('search', [
+                    'err' => true,
+                    'req' => $request
                 ]);
             }
         }
@@ -54,11 +56,12 @@ class Datacenter extends Controller
 
     }
 
-    public function select($id){
+    public function select($id)
+    {
         $item_name = urldecode($id);
-        $data = DB::table('items')->where('nama',$item_name)->get();
-        return view('select',[
-            "data"=> $data
+        $data = DB::table('items')->where('nama', $item_name)->get();
+        return view('select', [
+            "data" => $data
         ]);
     }
 }

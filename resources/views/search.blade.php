@@ -1,4 +1,4 @@
-@extends('components.front_store')
+@extends('components.navigation')
 
 @section('content')
 @if (!$err)

@@ -1,4 +1,4 @@
-@extends('components.front_store')
+@extends('components.navigation')
 
 @section('customStyle')
 <link rel="stylesheet" href="/res/css/select.css">

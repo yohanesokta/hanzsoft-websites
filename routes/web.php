@@ -23,7 +23,8 @@ Route::get('/about',function (){
 Route::get('/Store',[Datacenter::class,'store'])->name('home');
 
 Route::get('/',function (){
-    return  Redirect::route('home');
+    return  view('homepage');
 });
+
 
 Route::get('/Store/{id}', [Datacenter::class, 'select']);

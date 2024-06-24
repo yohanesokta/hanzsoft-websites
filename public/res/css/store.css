@@ -34,6 +34,7 @@ nav{
 .kategori a{
     text-decoration: none;
     margin: 10px;
+    width: 100%;
     font-family: 'Open Sans';
     color: gray;
     transition: 0.5s ease;
@@ -79,6 +80,11 @@ nav{
     font-size: 20px;
     color: rgb(177, 177, 177);
 }
+.items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 .item-box{
     margin: 50px 0;
     width: 100%;
@@ -104,7 +110,10 @@ nav{
     display: flex;
 }
 .item{
+    display: flex;
+    float: left;
     text-decoration: none;
+    margin: 20px;
 }
 .item-img{
     transition: 0.3s ease;
