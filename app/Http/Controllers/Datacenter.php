@@ -39,18 +39,13 @@ class Datacenter extends Controller
             $data = DB::table('items')->where('nama_query', 'like', '%' . $request->s . '%')->get();
 
 
-            if (count($data) > 0) {
-                return view('search', [
+
+                return view('debugsearch', [
                     'data' => $data,
                     'req' => $request,
                     'err' => false
                 ]);
-            } else {
-                return view('search', [
-                    'err' => true,
-                    'req' => $request
-                ]);
-            }
+
         }
 
 
