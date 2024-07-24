@@ -20,11 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/about',function (){
     return view('homepage');
 });
-Route::get('/Store',[Datacenter::class,'store'])->name('home');
-
-Route::get('/',function (){
-    return  view('homepage');
-});
+Route::get('/',[Datacenter::class,'store'])->name('home');
 
 
-Route::get('/Store/{id}', [Datacenter::class, 'select']);
+
+Route::get('/{id}', [Datacenter::class, 'select']);

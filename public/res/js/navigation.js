@@ -3,7 +3,7 @@ const screenWidth = window.innerWidth;
 console.log(screenWidth)
 document.querySelector('#logo').addEventListener('click', () => {
     if (window.innerWidth > 890 || navbar_state == true) {
-        window.location.href = "/Store"
+        window.location.href = "/"
     }
 })
 

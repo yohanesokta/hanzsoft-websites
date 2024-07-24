@@ -29,12 +29,12 @@
             <p>Hanzsoft</p>
         </div>
         <div class="categori">
-            <ul><li><a href="/Store#Desain">Desain</a></li></ul>
-            <ul><li><a href="/Store#Online">Online</a></li></ul>
-            <ul><li><a href="/Store#Multimedia">Multimedia</a></li></ul>
+            <ul><li><a href="/#Desain">Desain</a></li></ul>
+            <ul><li><a href="/#Multimedia">Multimedia</a></li></ul>
+            <ul><li><a href="/about">About</a></li></ul>
         </div>
         <div class="search-bar">
-            <form action="/Store" method="get" id="search-bar">
+            <form action="/" method="get" id="search-bar">
                 <input type="text" name='s' id="s" placeholder="Cari disini" value="{{$req->s ?? ''}}">
                 <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>

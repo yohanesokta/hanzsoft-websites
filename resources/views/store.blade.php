@@ -13,7 +13,7 @@
                 @foreach ($data as $Data)
                 @if($Data->kategori == $Cat->jenis)
 
-                    <a href='/Store/{{$Data->nama}}' class="tap item d-flex">
+                    <a href='/{{$Data->nama}}' class="tap item d-flex">
                         <img class="item-img" src={{ $Data->icon }} alt="">
                         <div class="item-info">
                             <p class="item-name">{{ $Data->nama }}</p>
@@ -22,7 +22,6 @@
                         </div>
                     </a>
                 @endif
-
                 @endforeach
 
         </div>

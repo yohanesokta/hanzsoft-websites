@@ -8,7 +8,7 @@
     @if (count($data) > 0)
         <div class="container-find">
             @foreach ($data as $Data)
-                    <a href={{ '/Store/'. urlencode($Data->nama)  }} class="special">
+                    <a href={{ '/'. urlencode($Data->nama)  }} class="special">
                         <img src={{ $Data->prev }} alt="">
                         <div class="container-desc">
                             <div class="desc">
